@@ -1,0 +1,670 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Magnolia Bakery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head> 
+
+
+<body class="font-sans">
+  <!-- Background--->
+ <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+
+  <div class="bg-white rounded-2xl p-6 w-11/12 max-w-md shadow-xl relative">
+    <!-- Close Button -->
+    <button class="absolute top-4 right-4 text-xl text-gray-500 hover:text-gray-700">&times;</button>
+    
+    <!-- Title -->
+    <h2 class="text-2xl font-semibold text-center text-purple-900 mb-2">Order ASAP</h2>
+    <p class="text-center text-gray-700 mb-6">Track and manage your DoorDash order online</p>
+    
+    <!-- Buttons -->
+    <div class="space-y-4">
+      <button class="w-full bg-purple-200 text-red-800 font-semibold py-3 rounded-full hover:bg-purple-300 transition">
+        ORDER LOCAL DELIVERY
+      </button>
+      <button class="w-full bg-purple-200 text-red-800 font-semibold py-3 rounded-full hover:bg-purple-300 transition">
+        ORDER LOCAL PICK UP
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Top Banner -->
+<div class="bg-black text-white text-center text-sm py-2 w-full">
+  ORDER DESSERTS FOR LOCAL PICK UP 🍡🍦🍬🍫🍩🍪
+</div>
+
+<!-- Header -->
+<header class="flex flex-col md:flex-row items-center justify-between px-4 py-4 border-b">
+  <h1 class="text-xl font-bold text-gray-800">
+    MAGNOLIA <sub class="text-sm">EST.</sub> BAKERY <sub class="text-sm">1996</sub>
+  </h1>
+<!--navigation-->
+  <nav class="flex flex-col md:flex-row md:items-center md:space-x-6 mt-4 md:mt-0 text-sm font-semibold">
+    <!---order-->
+    <div class="secondcontent hidden md:flex  space-x-6  px-5 ">
+      <div class="firstitem relative group inline-block text-left secondnav  md:flex  ">
+       <a href="#" class="font-bold text-md flex hover:text-red-950">
+           ORDER
+           <svg class="w-3 h-3 ms-2 mt-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m1 1 4 4 4-4" />
+           </svg>
+         </a>
+     
+       
+         <div class="fixed left-0 top-[100px] z-50 hidden group-hover:flex  bg-gray-400 w-screen shadow-md space-x-10 px-10 space-y-6">
+           <ul class="py-2 text-sm text-">
+             <li><a href="#" class="block px-4 py-2 mt-11 text-lg  font-bold hover:text-blue-950">ORDER</a></li>
+             <li><a href="#" class="block px-4 py-2 hover:text-blue-950">Advanced Order for Local Pick Up</a></li>
+             <li><a href="#" class="block px-4 py-2 hover:text-blue-950">Same Day Pick Up or Delivery</a></li>
+             <li><a href="#" class="block px-4 py-2 hover:text-blue-950">Nationwide Shipping</a></li>
+             <li><a href="#" class="block px-4 py-2 hover:text-blue-950">Corporate Catering</a></li>
+             <li><a href="#" class="block px-4 py-2 hover:text-blue-950">Gifting & Events</a></li>
+           </ul>
+         </div>
+        </div>
+        <!-- Product Menu -->
+<div class="secondcontent hidden md:flex relative">
+  <div class="firstitem group inline-block text-left">
+    <a href="#" class="font-bold text-md flex items-center hover:text-red-950">
+      PRODUCTS
+      <svg class="w-3 h-3 ms-2 mt-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m1 1 4 4 4-4" />
+      </svg>
+    </a>
+
+    <!-- Dropdown Menu -->
+    <div class="absolute left-0 top-full z-50 hidden group-hover:flex flex-col md:flex-row w-full md:w-screen bg-pink-50 shadow-md px-6 py-6 gap-6">
+      
+      <!-- First Column -->
+      <ul class="text-sm text-black space-y-4 w-full md:w-1/2 ">
+        <li><a href="#" class="block px-4 py-2 text-lg font-bold hover:text-red-950">PRODUCT</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">BROWNIES AND BARS</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">FRESH BANANA PUDDING</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">CAKES</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">CHEESECAKE</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">BIRTHDAY🎂</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">ICEBOX DESSERTS</a></li>
+      </ul>
+
+      <!-- Second Column -->
+      <ul class="text-sm text-black space-y-4 w-full md:w-1/2">
+        <li><a href="#" class="block px-4 py-2 text-lg font-bold hover:text-red-950"><u>VIEW GROCERY PRODUCTS</u></a></li>
+        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">SPRING TREATS</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">BANANA PUDDING CAKES</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">DOORDASH PUDDINGS</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">STORE LOCATOR</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">GRADUATION GIFTS🎁</a></li>
+      </ul>
+
+      <!-- Image Section -->
+      <div class="flex flex-col md:flex-row gap-4 mt-4 md:mt-0">
+        <div class="w-full md:w-40 text-center">
+          <img src="assets/c1.jpeg" alt="Chocolate Cake" class="w-full h-40 object-cover rounded-md" />
+          <p class="mt-2 text-gray-900">CHOCOLATE CAKE</p>
+        </div>
+        <div class="w-full md:w-40 text-center">
+          <img src="assets/c2.jpeg" alt="Birthday Cake" class="w-full h-40 object-cover rounded-md" />
+          <p class="mt-2 text-gray-900">BIRTHDAY CAKE</p>
+        </div>
+        <div class="w-full md:w-40 text-center">
+          <img src="assets/c3.jpeg" alt="Cookies" class="w-full h-40 object-cover rounded-md" />
+          <p class="mt-2 text-gray-900">COOKIES</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+     <!-- HOURS & LOCATIONS Dropdown -->
+<div class="secondcontent hidden md:flex  ">
+  <div class="firstitem relative group inline-block text-left ">
+    <a href="#" class="font-bold text-md flex items-center hover:text-red-950">
+      HOURS & LOCATIONS
+      <svg class="w-3 h-3 ms-2 mt-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m1 1 4 4 4-4" />
+      </svg>
+    </a>
+
+    <!-- Dropdown Menu -->
+    <div class="fixed left-0 top-[100px] z-50 hidden group-hover:flex w-screen bg-purple-50 shadow-md px-10 py-6 gap-16">
+      
+      <!-- New York Locations -->
+      <ul class="text-sm text-black space-y-2 w-1/2">
+        <li class="text-lg font-bold mt-2 hover:text-pink-950">NEW YORK</li>
+        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">BLEECKER STREET</a></li>
+        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">BLOOMINGDALES</a></li>
+        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">CENTRAL PARK SOUTH</a></li>
+        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">GRAND CENTRAL TERMINAL</a></li>
+        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">HUDSON YARDS</a></li>
+        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">MOYNIHAN TRAIN HALL</a></li>
+        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">ROCKEFELLER CENTER</a></li>
+        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">UPPER WEST SIDE</a></li>
+        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">LOS ANGELES</a></li>
+      </ul>
+
+      <!-- International Locations -->
+      <ul class="text-sm text-black space-y-2 w-1/2">
+        <li class="text-lg font-bold mt-2 hover:text-purple-950">INTERNATIONAL</li>
+        <li><a href="#" class="block px-2 py-1 hover:text-purple-950">INDIA</a></li>
+        <li><a href="#" class="block px-2 py-1 hover:text-purple-950">JORDAN</a></li>
+        <li><a href="#" class="block px-2 py-1 hover:text-purple-950">KUWAIT</a></li>
+        <li><a href="#" class="block px-2 py-1 hover:text-purple-950">AMERICA</a></li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+               <!-- About Us -->
+<div class="secondcontent hidden md:flex space-x-6">
+  <div class="relative group inline-block text-left">
+    <!-- Trigger -->
+    <a href="#" class="font-bold text-md flex items-center hover:text-red-950">
+      ABOUT US
+      <svg class="w-3 h-3 ms-2 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m1 1 4 4 4-4" />
+      </svg>
+    </a>
+
+    <!-- Dropdown -->
+    <div class="absolute left-0 mt-2 z-50 hidden group-hover:block bg-blue-50 w-[300px] shadow-md">
+      <ul class="py-2 text-sm text-black">
+        <li><a href="#" class="block px-4 py-2 text-lg font-bold hover:text-green-500"><u>ABOUT</u></a></li>
+        <li><a href="#" class="block px-4 py-2 hover:text-green-500">OUR STORY</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:text-green-500">CAREERS</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:text-green-500">NEWSROOM</a></li>
+        <li><a href="#" class="block px-4 py-2 text-lg font-bold hover:text-green-500"><u>CONTACT</u></a></li>
+        <li><a href="#" class="block px-4 py-2 text-lg font-bold hover:text-green-500"><u>HELP CENTER</u></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <a href="#" class="bg-purple-200 px-4 py-2 rounded-full text-center text-black hover:bg-purple-600 mt-2 md:mt-0">Order ASAP</a>
+  </nav>
+
+
+  <!-- Icons -->
+  <div class="flex space-x-3 mt-4 md:mt-0">
+    <i class="fa fa-search border border-black w-8 h-8 flex items-center justify-center rounded-full hover:text-pink-700"></i>
+    <i class="fa fa-user-o border border-black w-8 h-8 flex items-center justify-center rounded-full hover:text-pink-700"></i>
+    <i class="fa fa-shopping-cart border border-black w-8 h-8 flex items-center justify-center rounded-full hover:text-pink-700"></i>
+  </div>
+</header>
+<div id="controls-carousel" class="relative w-full mt-20" data-carousel="static">
+  <!-- Carousel wrapper -->
+  <div class="relative h-56 overflow-hidden rounded-lg md:h-[700px]">
+    <!-- Item 1 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+      <img src="assets/magnolia6.jpg" class="absolute block w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="Slide 1">
+      <div class="absolute inset-0 flex items-center justify-center">
+         <!-- Content Box -->
+       <div class="overall-box  ">
+        <div class="absolute  bottom-2 left-14   w-[68%] sm:w-44 md:w-60 lg:w-96  lg:bottom-24 bg-sky-300/80 text-center text-black rounded-[40px] z-10 shadow-md">
+                    
+          <h2 class="text-lg sm:text-sm md:text-md lg:text-3xl font-bold pt-7  lg:pt-28" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+            Enter the Bake Sale!
+          </h2>
+      
+          <h3 class="text-xs sm:text-sm md:text-base mt-2 leading-snug">
+            To celebrate the launch of our newest handbook, we're hosting a contest for home bakeries. To enter and for our Ts+Cs, click below.
+          </h3>
+      
+          <div class="pt-6 mb-3">
+            <a href="#" class="inline-block bg-indigo-950 text-sky-100 text-sm sm:text-base font-serif px-4 py-2 sm:px-6 sm:py-3 rounded-md hover:bg-white hover:text-black transition">
+              ENTER NOW
+            </a>
+          </div>
+        </div>
+         </div>
+      
+          
+          
+        </div>
+      
+    </div>
+
+    
+    <!-- Item 3 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="assets/magnolia8.jpg" class="absolute block w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="Slide 3">
+      <!-- Content Box -->
+      <div class="overall-box  ">
+        <div class="absolute  bottom-2 left-14   w-[68%] sm:w-44 md:w-60 lg:w-96  lg:bottom-24 bg-green-300/80 text-center text-black rounded-[40px] z-10 shadow-md">
+                    
+          <h2 class="text-lg sm:text-sm md:text-md lg:text-3xl font-bold pt-7  lg:pt-28" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+            Enter the Bake Sale!
+          </h2>
+      
+          <h3 class="text-xs sm:text-sm md:text-base mt-2 leading-snug">
+            To celebrate the launch of our newest handbook, we're hosting a contest for home bakeries. To enter and for our Ts+Cs, click below.
+          </h3>
+      
+          <div class="pt-6 mb-3">
+            <a href="#" class="inline-block bg-indigo-950 text-sky-100 text-sm sm:text-base font-serif px-4 py-2 sm:px-6 sm:py-3 rounded-md hover:bg-white transition">
+              ENTER NOW
+            </a>
+          </div>
+        </div>
+         </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="assets/magnolia9.jpg" class="absolute block w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="Slide 4">
+         <!-- Content Box -->
+         <div class="overall-box  ">
+          <div class="absolute  bottom-2 left-14   w-[68%] sm:w-44 md:w-60 lg:w-96  lg:bottom-24 bg-orange-200/80 text-center text-black rounded-[40px] z-10 shadow-md">
+                      
+            <h2 class="text-lg sm:text-sm md:text-md lg:text-3xl font-bold pt-7  lg:pt-28" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+              Enter the Bake Sale!
+            </h2>
+        
+            <h3 class="text-xs sm:text-sm md:text-base mt-2 leading-snug">
+              To celebrate the launch of our newest handbook, we're hosting a contest for home bakeries. To enter and for our Ts+Cs, click below.
+            </h3>
+        
+            <div class="pt-6 mb-3">
+              <a href="#" class="inline-block bg-indigo-950 text-sky-100 text-sm sm:text-base font-serif px-4 py-2 sm:px-6 sm:py-3 rounded-md hover:bg-white hover:text-black transition">
+                ENTER NOW
+              </a>
+            </div>
+          </div>
+
+
+          
+           </div>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="assets/magnolia10.jpeg" class="absolute block w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="Slide 5">
+      <div class="overall-box  ">
+        <div class="absolute  bottom-2 left-14   w-[68%] sm:w-44 md:w-60 lg:w-96  lg:bottom-24 bg-purple-200/80 text-center text-black rounded-[40px] z-10 shadow-md">
+                    
+          <h2 class="text-lg sm:text-sm md:text-md lg:text-3xl font-bold pt-7  lg:pt-28" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+            Enter the Bake Sale!
+          </h2>
+      
+          <h3 class="text-xs sm:text-sm md:text-base mt-2 leading-snug">
+            To celebrate the launch of our newest handbook, we're hosting a contest for home bakeries. To enter and for our Ts+Cs, click below.
+          </h3>
+      
+          <div class="pt-6 mb-3">
+            <a href="#" class="inline-block bg-indigo-950 text-sky-100 text-sm sm:text-base font-serif px-4 py-2 sm:px-6 sm:py-3 rounded-md hover:bg-white hover:text-black transition">
+              ENTER NOW
+            </a>
+          </div>
+        </div>
+         </div>
+    </div>
+
+    <!-- Item 6 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="assets/c1.jpeg" class="absolute block w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="Slide 6">
+      <!-- Content Box -->
+      <div class="overall-box ">
+        <div class="absolute  bottom-2 left-14   w-[68%] sm:w-44 md:w-60 lg:w-96  lg:bottom-24 bg-red-200/80 text-center text-black rounded-[40px] z-10 shadow-md">
+                    
+          <h2 class="text-lg sm:text-sm md:text-md lg:text-3xl font-bold pt-7  lg:pt-28" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+            Enter the Bake Sale!
+          </h2>
+      
+          <h3 class="text-xs sm:text-sm md:text-base mt-2 leading-snug">
+            To celebrate the launch of our newest handbook, we're hosting a contest for home bakeries. To enter and for our Ts+Cs, click below.
+          </h3>
+      a
+          <div class="pt-6 mb-3">
+            <a href="#" class="inline-block bg-indigo-950 text-sky-100 text-sm sm:text-base font-serif px-4 py-2 sm:px-6 sm:py-3 rounded-md hover:bg-white hover:text-black transition">
+              ENTER NOW
+            </a>
+          </div>
+        </div>
+         </div>
+    </div>
+    
+  </div>
+ 
+
+  <!-- Slider controls -->
+   
+  <!-- Indicators -->
+  <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-9 left-60">
+    <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+    <button type="button" class="w-3 h-3 rounded-full" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+    <button type="button" class="w-3 h-3 rounded-full" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+    <button type="button" class="w-3 h-3 rounded-full" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+    <button type="button" class="w-3 h-3 rounded-full" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+    <button type="button" class="w-3 h-3 rounded-full" aria-label="Slide 6" data-carousel-slide-to="5"></button>
+  </div>
+
+  <!-- Navigation buttons -->
+  <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none -mt-10 lg:mt-[310px] lg:ml-24" data-carousel-prev>
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
+      <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" fill="none" viewBox="0 0 6 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+      </svg>
+      <span class="sr-only">Previous</span>
+    </span>
+  </button>
+
+  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none -mt-10 ml-5  lg:mt-[310px] lg:pr-[890px]  " data-carousel-next >
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
+      <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" fill="none" viewBox="0 0 6 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+      </svg>
+      <span class="sr-only">Next</span>
+    </span>
+  </button>
+</div>
+<!-- Contents -->
+<div class="bg-gray-200 p-6">
+  <div class="grid gap-6">
+    <h1 class="font-serif text-center font-extrabold text-lg">Our Products</h1>
+
+    <p class="font-serif text-center font-medium px-6">
+      For more than 25 years, Magnolia Bakery has been making America's favorite baked goods the old-fashioned way: from scratch, in small batches, and using the finest ingredients.
+    </p>
+
+   
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<!-- Responsive Image Carousel with Buttons second images sections-->
+<div class="fifthsection mt-10 px-5">
+  <!-- Buttons -->
+  <div class="buttons text-right space-x-3 mb-3">
+    <button id="slider-button-left" class="border border-black w-8 h-8 rounded-full bg-black text-white">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button id="slider-button-right" class="border border-black w-8 h-8 rounded-full bg-black text-white">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- Carousel -->
+  <div id="image-slider" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-4 ">
+    <!-- Slide -->
+    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img src="assets/cherry.jpg" class="w-64 h-80 object-cover rounded-lg" />
+      <p class="py-2 text-2xl font-serif">CHERRYSTAR</p>
+    </div>
+    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img src="assets/c1.jpeg" class="w-64 h-80 object-cover rounded-lg" />
+      <p class="py-2 text-2xl font-serif">CHOCOLATESLICE</p>
+    </div>
+    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img src="assets/c2.jpeg" class="w-64 h-80 object-cover rounded-lg" />
+      <p class="py-2 text-2xl font-serif">BIRTHDAY CAKE</p>
+    </div>
+    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img src="assets/c3.jpeg" class="w-64 h-80 object-cover rounded-lg" />
+      <p class="py-2 text-2xl font-serif">PURPIES</p>
+    </div>
+    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img src="assets/c4.jpeg" class="w-64 h-80 object-cover rounded-lg" />
+      <p class="py-2 text-2xl font-serif">DREAM CAKE</p>
+    </div>
+    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img src="assets/c5.jpeg" class="w-64 h-80 object-cover rounded-lg" />
+      <p class="py-2 text-2xl font-serif"> FAMOUS PUDDING</p>
+    </div>
+    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img src="assets/c6.jpeg" class="w-64 h-80 object-cover rounded-lg" />
+      <p class="py-2 text-2xl font-serif">SONPOP</p>
+    </div>
+    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img src="assets/c7.jpg" class="w-64 h-80 object-cover rounded-lg" />
+      <p class="py-2 text-2xl font-serif">PALCOVA</p>
+    </div>
+    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img src="assets/magnolia 1.jpeg" class="w-64 h-80 object-cover rounded-lg" />
+      <p class="py-2 text-2xl font-serif">GHEE POP</p>
+    </div>
+    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img src="assets/magnolia 2.jpeg" class="w-64 h-80 object-cover rounded-lg" />
+      <p class="py-2 text-2xl font-serif">CUP ICE</p>
+    </div>
+    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img src="assets/magnolia 3.jpeg" class="w-64 h-80 object-cover rounded-lg" />
+      <p class="py-2 text-2xl font-serif">WATERJELLY</p>
+    </div>
+    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img src="assets/magnolia4.jpg" class="w-64 h-80 object-cover rounded-lg" />
+      <p class="py-2 text-2xl font-serif">RAINBOW</p>
+    </div>
+    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img src="assets/magnolia5.jpg" class="w-64 h-80 object-cover rounded-lg" />
+      <p class="py-2 text-2xl font-serif">7SKYMOONCAKE</p>
+    </div>
+    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img src="assets/juice.jpg" class="w-64 h-80 object-cover rounded-lg" />
+      <p class="py-2 text-2xl font-serif">FRUITSJUICE</p>
+    </div>
+  </div>
+</div>
+<!-- Container: Bakery Section -->
+<div class="bg-green-300 p-6 sm:p-10 text-center">
+  <div>
+    <h1 class="text-lg sm:text-2xl text-black font-bold font-mono">TREADS FOR ANY OCCASION</h1>
+    <p class="text-sm sm:text-base text-gray-800 font-serif py-4">
+      WE HAVE GOT YOU COVERED FOR ANY HOLIDAY, SPECIAL OCCASION, OR CAUSE FOR CELEBRATION...
+    </p>
+    <h3 class="text-lg sm:text-xl text-black font-bold hover:text-purple-950 py-4">
+      <u>VIEW MORE</u>
+    </h3>
+
+    <div class="flex flex-wrap justify-center gap-6 mt-4">
+      <div class="w-40 sm:w-60">
+        <img src="assets/c1.jpeg" alt="Chocolate Cake" class="w-full h-40 sm:h-60 object-cover rounded-md" />
+        <p class="mt-2 text-gray-900">CHOCOLATE CAKE</p>
+      </div>
+      <div class="w-40 sm:w-60">
+        <img src="assets/magnolia 3.jpeg" alt="Birthday Cake" class="w-full h-40 sm:h-60 object-cover rounded-md" />
+        <p class="mt-2 text-gray-900">WATERJELLY</p>
+      </div>
+      <div class="w-40 sm:w-60">
+        <img src="assets/magnolia5.jpg" alt="Cookies" class="w-full h-40 sm:h-60 object-cover rounded-md" />
+        <p class="mt-2 text-gray-900">7SKYMOONCAKE</p>
+      </div>
+      <div class="w-40 sm:w-60">
+        <img src="assets/c4.jpeg" alt="Dream Cake" class="w-full h-40 sm:h-60 object-cover rounded-md" />
+        <p class="mt-2 text-gray-900">DREAM CAKE</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container: Delivery Section -->
+<div class=" p-6 sm:p-10 text-center">
+  <div class="text-center">
+    <h1 class="text-xl sm:text-2xl font-semibold">DELIVERY AND PICKUP OPTIONS</h1>
+    <p class="py-4 text-base leading-relaxed justify-center text-justify font-serif">
+      A bakery is an establishment that produces and sells flour-based baked goods made in an oven such as bread, cookies, cakes, doughnuts, bagels, pastries, and pies. Some retail bakeries are also categorized as cafés, serving coffee and tea to customers who wish to consume the baked goods on the premises.
+    </p>
+    
+  
+</div>
+
+<div class="text-end">
+  <a href="#" class="text-black hover:text-purple-900 underline font-medium">LEARN MORE</a>
+</div>
+</div>
+<!-- Image section -->
+<div class="py-10">
+  <div class="flex flex-col md:flex-row md:flex-wrap gap-6 items-center justify-center">
+    
+    <div class="w-80 md:w-96 h-72">
+      <img src="assets/example1.jpg" alt="Chocolate Cake" class="w-full h-60 object-cover rounded-md" />
+      <p class="mt-2 text-gray-900 text-center text-lg font-bold">ADVANCE ORDER LOCAL PICKUP</p>
+    </div>
+
+    <div class="w-80 md:w-96 h-72">
+      <img src="assets/example2.jpg" alt="Birthday Cake" class="w-full h-60 object-cover rounded-md" />
+      <p class="mt-2 text-gray-900 text-center text-lg font-bold">NATIONWIDE SHIPPING</p>
+    </div>
+
+    <div class="w-80 md:w-96 h-72">
+      <img src="assets/example3.jpg" alt="Cookies" class="w-full h-60 object-cover rounded-md" />
+      <p class="mt-2 text-gray-900 text-center text-lg font-bold">CATERING AND EVENTS</p>
+    </div>
+
+  </div>
+</div>
+
+<!--gifts-->
+<div class="flex flex-col md:flex-row bg-pink-300">
+  
+  <div class="w-full md:w-full p-4 flex flex-col justify-center items-center text-center">
+    <h1 class="font-thin py-6 text-4xl md:text-6xl" style="font-family:'Times New Roman', Times, serif;">
+      Catering, Gifting & Events
+    </h1>
+    <p class="font-serif py-4 px-4 md:px-20 max-w-md md:max-w-none">
+      Our catering, gifting and events team is ready to fill your event or celebration with a custom selection of Magnolia Bakery’s best creations. No occasion is too large—or too small!
+    </p>
+    <button class="bg-pink-950 hover:bg-violet-950 rounded px-8 py-2 text-white mt-4">
+      GET STARTED
+    </button>
+  </div>
+
+  <!--images-->
+  <div class="w-full md:w-1/2">
+    <img src="assets/catering.jpg" class="w-full h-auto object-cover">
+  </div>
+</div>
+</div>
+  <!-- Newsletter Section -->
+<div class="relative w-full h-auto py-16 px-4 md:px-0 overflow-hidden ">
+  <img src="assets/WhatsApp Image 2025-05-04 at 10.38.28_e7e3808b.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 z-0" />
+
+  <div class="relative z-10 max-w-3xl mx-auto text-center text-black">
+    <h1 class="text-3xl md:text-5xl font-bold mb-4">Join our Newsletter</h1>
+    <p class="text-base md:text-lg">
+      Get the freshest Magnolia Bakery updates and offers right to your inbox!<br>
+      Plus, enjoy 10% off on your birthday when you share the date with us!
+    </p>
+
+    <div class="mt-8 flex justify-center">
+      <div class="relative w-full max-w-md">
+        <input type="text" placeholder="ENTER YOUR EMAIL" 
+               class="w-full px-6 py-3 text-gray-600 border-2 border-gray-950 rounded-lg bg-transparent placeholder:text-gray-400 font-medium" />
+        <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer Section -->
+<footer class="bg-green-500 text-black px-4 py-10 font-sans">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <!-- Column 1 -->
+    <div>
+      <img src="./assets/logo.png" alt="Logo" class="w-24 mb-4 bg-transparent" />
+      <ul class="space-y-1">
+        <li><a href="#" class="block hover:underline">CAREERS</a></li>
+        <li><a href="#" class="block hover:underline">PRESS</a></li>
+        <li><a href="#" class="block hover:underline">INTERNATIONAL PURCHASE</a></li>
+        <li><a href="#" class="block hover:underline">GIFT CARDS</a></li>
+        <li><a href="#" class="block hover:underline">SUBSCRIPTION</a></li>
+        <li><a href="#" class="block hover:underline">GIVING BACK</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 2 -->
+    <div>
+      <ul class="space-y-1">
+        <li><a href="#" class="block hover:underline">HELP CENTER</a></li>
+        <li><a href="#" class="block hover:underline">REFUND AND RETURNS</a></li>
+        <li><a href="#" class="block hover:underline">LOYALTY REWARDS</a></li>
+        <li><a href="#" class="block hover:underline">WHOLESALE</a></li>
+        <li><a href="#" class="block hover:underline">NEWSROOM</a></li>
+        <li><a href="#" class="block hover:underline">ENTER OUR SALE</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div>
+      <ul class="space-y-1">
+        <li><a href="#" class="block hover:underline">HAVE A QUESTION</a></li>
+        <li><a href="#" class="block hover:underline">WE ARE ALWAYS HERE TO HELP</a></li>
+        <li><a href="#" class="block hover:underline">CONSUMER CARE HOURS (MON–FRI, 9AM–5PM EST)</a></li>
+        <li><a href="#" class="block hover:underline">CONTACT US</a></li>
+      </ul>
+
+      <!-- Social Icons -->
+      <div class="flex space-x-4 mt-6 text-xl w-64">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+        <a href="#"><i class="fa-brands fa-google-play"></i></a>
+      </div>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="space-y-6">
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:underline">DO NOT SELL MY INFORMATION</a></li>
+        <li><a href="#" class="hover:underline">PRIVACY POLICY</a></li>
+        <li><a href="#" class="hover:underline">TERMS OF SERVICE</a></li>
+        <li><a href="#" class="hover:underline">ACCESSIBILITY STATEMENT</a></li>
+      </ul>
+
+      <!-- Payment Icons -->
+      <div class="flex space-x-4 text-2xl w-60">
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-solid fa-earth-americas"></i>
+        <i class="fa-brands fa-cc-discover"></i>
+        <i class="fa-brands fa-pied-piper-hat"></i>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+
+<!-- JS Scroll Buttons -->
+<script>
+  const slider = document.getElementById('image-slider');
+  const leftBtn = document.getElementById('slider-button-left');
+  const rightBtn = document.getElementById('slider-button-right');
+
+  leftBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+
+  rightBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+
+  // Get the close button and the overlay
+  const closeBtn = document.querySelector(".absolute.top-4.right-4");
+  const overlay = document.querySelector(".fixed.inset-0");
+
+  // Hide the overlay when the close button is clicked
+  closeBtn.onclick = () => {
+    overlay.style.display = "none";
+  };
+
+</script>
+ </body>
+ </html>
