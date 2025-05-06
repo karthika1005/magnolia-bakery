@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -11,6 +11,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="input.css">
 
 </head> 
 
@@ -38,174 +39,171 @@
     </div>
   </div>
 </div>
-
-
-
-<!-- Top Banner -->
-<div class="bg-black text-white text-center text-sm py-2 w-full">
-  ORDER DESSERTS FOR LOCAL PICK UP 🍡🍦🍬🍫🍩🍪
+<!--header section-->
+<div class="bg-black py-3  ">
+  <p class="text-white text-center  font-medium hover:text-green-200 hover:cursor-pointer">ORDER DESSERTS FOR LOCAL PICK UP</p>
 </div>
+<div class="flex px-5 py-5  justify-between items-center z-500  left-0 right-0 top-7.5  bg-white  ">
+<div class="flex space-x-5 items-center ">
+  <div class="logo  hover:cursor-pointer z-50">
+  <div class="text-center ">
+      <h1 class="font-bold text-xl ">MAGNOLIA </h1>
+  </div>
+  <div class="flex  justify-center -top-3">
+         <span class="font-medium " style="font-size: 8px;">ESC.</span><h1 class="font-bold text-xl px-1 -mt-2">BAKERY</h1><span class="font-medium" style="font-size: 8px;">1996</span>
+  </div>
+  </div>
+  
+   
+  <ul class="space-x-5  flex   ">
+      <div class="group relative ">
+      <a href="#" class="flex hover:text-green-200 relative font-semibold text-xl items-center  ">ORDER
+          <svg class="-mr-1 size-5 text-black hover:text-green-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+              <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+            </svg>
+      </a>
+      <div class="shadow-lg left-0 bg-white   fixed w-screen hidden group-hover:block pt-20 pb-8 space-y-2 ps-4 z-50">
+          
+          <a href="#" class="block font-semibold text-xl hover:text-green-200 ">ORDER</a>
+          <a href="#" class="block hover:text-green-200 text-lg">Advanced Order for Local Pick Up</a>
+          <a href="#" class="block hover:text-green-200 text-lg">Same Day Pick Up or Delivery</a>
+          <a href="#" class="block hover:text-green-200 text-lg">Nationwide Shipping</a>
+          <a href="#" class="block hover:text-green-200 text-lg">Corporate Catering</a>
+          <a href="#" class="block hover:text-green-200 text-lg">Gifting & Events</a>
 
-<!-- Header -->
-<header class="flex flex-col md:flex-row items-center justify-between px-4 py-4 border-b">
-  <h1 class="text-xl font-bold text-gray-800">
-    MAGNOLIA <sub class="text-sm">EST.</sub> BAKERY <sub class="text-sm">1996</sub>
-  </h1>
-<!--navigation-->
-  <nav class="flex flex-col md:flex-row md:items-center md:space-x-6 mt-4 md:mt-0 text-sm font-semibold">
-    <!---order-->
-    <div class="secondcontent hidden md:flex  space-x-6  px-5 ">
-      <div class="firstitem relative group inline-block text-left secondnav  md:flex  ">
-       <a href="#" class="font-bold text-md flex hover:text-red-950">
-           ORDER
-           <svg class="w-3 h-3 ms-2 mt-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m1 1 4 4 4-4" />
-           </svg>
-         </a>
-     
-       
-         <div class="fixed left-0 top-[100px] z-50 hidden group-hover:flex  bg-gray-400 w-screen shadow-md space-x-10 px-10 space-y-6">
-           <ul class="py-2 text-sm text-">
-             <li><a href="#" class="block px-4 py-2 mt-11 text-lg  font-bold hover:text-blue-950">ORDER</a></li>
-             <li><a href="#" class="block px-4 py-2 hover:text-blue-950">Advanced Order for Local Pick Up</a></li>
-             <li><a href="#" class="block px-4 py-2 hover:text-blue-950">Same Day Pick Up or Delivery</a></li>
-             <li><a href="#" class="block px-4 py-2 hover:text-blue-950">Nationwide Shipping</a></li>
-             <li><a href="#" class="block px-4 py-2 hover:text-blue-950">Corporate Catering</a></li>
-             <li><a href="#" class="block px-4 py-2 hover:text-blue-950">Gifting & Events</a></li>
-           </ul>
-         </div>
-        </div>
-        <!-- Product Menu -->
-<div class="secondcontent hidden md:flex relative">
-  <div class="firstitem group inline-block text-left">
-    <a href="#" class="font-bold text-md flex items-center hover:text-red-950">
-      PRODUCTS
-      <svg class="w-3 h-3 ms-2 mt-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m1 1 4 4 4-4" />
-      </svg>
-    </a>
-
-    <!-- Dropdown Menu -->
-    <div class="absolute left-0 top-full z-50 hidden group-hover:flex flex-col md:flex-row w-full md:w-screen bg-pink-50 shadow-md px-6 py-6 gap-6">
-      
-      <!-- First Column -->
-      <ul class="text-sm text-black space-y-4 w-full md:w-1/2 ">
-        <li><a href="#" class="block px-4 py-2 text-lg font-bold hover:text-red-950">PRODUCT</a></li>
-        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">BROWNIES AND BARS</a></li>
-        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">FRESH BANANA PUDDING</a></li>
-        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">CAKES</a></li>
-        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">CHEESECAKE</a></li>
-        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">BIRTHDAY🎂</a></li>
-        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">ICEBOX DESSERTS</a></li>
-      </ul>
-
-      <!-- Second Column -->
-      <ul class="text-sm text-black space-y-4 w-full md:w-1/2">
-        <li><a href="#" class="block px-4 py-2 text-lg font-bold hover:text-red-950"><u>VIEW GROCERY PRODUCTS</u></a></li>
-        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">SPRING TREATS</a></li>
-        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">BANANA PUDDING CAKES</a></li>
-        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">DOORDASH PUDDINGS</a></li>
-        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">STORE LOCATOR</a></li>
-        <li><a href="#" class="block px-4 py-2 hover:text-blue-900">GRADUATION GIFTS🎁</a></li>
-      </ul>
-
-      <!-- Image Section -->
-      <div class="flex flex-col md:flex-row gap-4 mt-4 md:mt-0">
-        <div class="w-full md:w-40 text-center">
-          <img src="c1.jpeg" alt="Chocolate Cake" class="w-full h-40 object-cover rounded-md" />
-          <p class="mt-2 text-gray-900">CHOCOLATE CAKE</p>
-        </div>
-        <div class="w-full md:w-40 text-center">
-          <img src="c2.jpeg" alt="Birthday Cake" class="w-full h-40 object-cover rounded-md" />
-          <p class="mt-2 text-gray-900">BIRTHDAY CAKE</p>
-        </div>
-        <div class="w-full md:w-40 text-center">
-          <img src="c3.jpeg" alt="Cookies" class="w-full h-40 object-cover rounded-md" />
-          <p class="mt-2 text-gray-900">COOKIES</p>
-        </div>
       </div>
-    </div>
-  </div>
-</div>
-
-
-     <!-- HOURS & LOCATIONS Dropdown -->
-<div class="secondcontent hidden md:flex  ">
-  <div class="firstitem relative group inline-block text-left ">
-    <a href="#" class="font-bold text-md flex items-center hover:text-red-950">
-      HOURS & LOCATIONS
-      <svg class="w-3 h-3 ms-2 mt-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m1 1 4 4 4-4" />
-      </svg>
-    </a>
-
-    <!-- Dropdown Menu -->
-    <div class="fixed left-0 top-[100px] z-50 hidden group-hover:flex w-screen bg-purple-50 shadow-md px-10 py-6 gap-16">
+      </div>
       
-      <!-- New York Locations -->
-      <ul class="text-sm text-black space-y-2 w-1/2">
-        <li class="text-lg font-bold mt-2 hover:text-pink-950">NEW YORK</li>
-        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">BLEECKER STREET</a></li>
-        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">BLOOMINGDALES</a></li>
-        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">CENTRAL PARK SOUTH</a></li>
-        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">GRAND CENTRAL TERMINAL</a></li>
-        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">HUDSON YARDS</a></li>
-        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">MOYNIHAN TRAIN HALL</a></li>
-        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">ROCKEFELLER CENTER</a></li>
-        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">UPPER WEST SIDE</a></li>
-        <li><a href="#" class="block px-2 py-1 hover:text-pink-950">LOS ANGELES</a></li>
+      <div class="group relative">
+      <a href="#" class="flex hover:text-green-200 relative font-semibold text-xl items-center">PRODUCTS
+          <svg class="-mr-1 size-5 text-black hover:text-green-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+              <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+            </svg>
+      </a>
+      <div class="shadow-lg left-0 bg-white  fixed w-screen hidden group-hover:flex space-x-10 pt-20 pb-10  ps-4 z-50">
+         <ul class="space-y-2"> 
+      <a href="#" class="block font-semibold  hover:text-green-200 text-xl">SHOP BAKERY PRODUCTS</a>
+       <a href="#" class="block hover:text-green-200 text-lg"> Fresh Banana Pudding</a>
+       <a href="#" class="block hover:text-green-200 text-lg">Brownies & Bars</a>
+       <a href="#" class="block hover:text-green-200 text-lg">Cakes</a>
+       <a href="#" class="block hover:text-green-200 text-lg">Cheesecakes</a>
+       <a href="#" class="block hover:text-green-200 text-lg">Cookies</a>
+       <a href="#" class="block hover:text-green-200 text-lg">Cupcakes</a>
+       <a href="#" class="block hover:text-green-200 text-lg">Icebox Desserts</a>
+       <a href="#" class="block hover:text-green-200 text-lg">In-Store Gift Cards</a>
+      <a href="#" class="block hover:text-green-200 text-lg"> Online Only Gift Cards</a>
+         </ul>
+       <ul class="space-y-2 mt-10" >
+              <a href="#" class="block hover:text-green-200 text-lg">Merchandise</a>
+              <a href="#" class="block hover:text-green-200 text-lg">Pudding of the Month</a>
+              <a href="#" class="block hover:text-green-200 text-lg">Pudding Club Subscription</a>
+              <a href="#" class="block hover:text-green-200 text-lg"> Sampler Packs</a>
+              <a href="#" class="block hover:text-green-200 text-lg"> Birthdays 🎂</a>
+              <a href="#" class="block hover:text-green-200 text-lg">Spring Treats 🌸 </a>
+              <a href="#" class="block hover:text-green-200 text-lg">Graduation Gifts 🎓 </a>
+       </ul>
+       <ul class="space-y-2">
+        <a href="#" class="block font-semibold  hover:text-green-200 text-xl">VIEW GROCERY PRODUCTS</a>
+       <a href="#" class="block hover:text-green-200 text-lg">Banana Pudding</a>
+       <a href="#" class="block hover:text-green-200 text-lg">Banana Pudding Cookies</a>
+       <a href="#" class="block hover:text-green-200 text-lg">DoorDash Exclusive Banana Pudding</a>
+       <a href="#" class="block hover:text-green-200 text-lg">Store Locator</a>
+       </ul>
+       <ul class="flex space-x-3 mx-5 ms-20">
+        <a href="#">
+          <img src="frozen_banana_pudding[1].jpg" alt="" class="w-[170px] h-[170px] rounded-xl">
+          <p class="text-lg w-42 text-center pt-2 hover:text-green-200">New! Gopuff <br> Exclusive <br> Puff’rnutter Cupcake</p>
+      </a>
+        <a href="#">
+          <img src="gopuff[1].jpg" alt="" class="w-[170px] h-[170px] rounded-xl">
+          <p class="text-center text-lg pt-2 hover:text-green-200">Mother's Day Treats</p>
+        </a>
+        <a href="#">
+          <img src="treat-cake[1].jpg" alt="" class="w-[170px] h-[170px] rounded-xl">
+        <p class="text-lg text-center w-40 pt-2 hover:text-green-200">New! Frozen-To-<br>Thaw Banana <br> Pudding</p></a>
+
+       </ul>
+
+
+
+      </div>
+      </div>
+      <div class="group relative">
+      <a href="#" class="flex hover:text-green-200 font-semibold text-xl items-center">HOURS & LOCATION
+          <svg class="-mr-1 size-5 text-black hover:text-green-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+              <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+            </svg>
+      </a>
+      <div class="shadow-lg left-0 bg-white  fixed w-screen hidden group-hover:flex pt-20 pb-10  pl-5 z-50">
+      <ul class="  space-y-2 "> 
+        <a href="#" class="block font-semibold  hover:text-green-200 text-xl">NEW YORK</a>
+        <a href="#" class="block hover:text-green-200 text-lg">Bleecker Street</a>
+      <a href="#" class="block hover:text-green-200 text-lg">Central Park South</a>
+      <a href="#" class="block hover:text-green-200 text-lg">Grand Central Terminal</a>
+      <a href="#" class="block hover:text-green-200 text-lg">Grand Central Madison</a>
+      <a href="#" class="block hover:text-green-200 text-lg">Hudson Yards</a>
+      <a href="#" class="block hover:text-green-200 text-lg">LaGuardia Airport Terminal C</a>
+      <a href="#" class="block hover:text-green-200 text-lg">Moynihan Train Hall/a>
+      <a href="#" class="block hover:text-green-200 text-lg">Rockefeller Center</a>
+     <a href="#" class="block hover:text-green-200 text-lg">Upper West Side</a>
+        </ul>
+      <ul class="space-y-2 ms-40">
+             <a href="#" class="block hover:text-green-200  text-xl font-medium">CALIFORNIA</a>
+             <a href="#" class="block hover:text-green-200 text-lg">Los Angeles (West Hollywood)</a>
+             <a href="#" class="block hover:text-green-200  text-xl font-medium">ILLINOIS</a>
+             <a href="#" class="block hover:text-green-200 text-lg"> Chicago (Loop)</a>
+             <a href="#" class="block hover:text-green-200  text-xl font-medium"> INTERNATIONAL</a>
+             <a href="#" class="block hover:text-green-200 text-lg">India</a>
+             <a href="#" class="block hover:text-green-200 text-lg">Jordan</a>
+             <a href="#" class="block hover:text-green-200 text-lg">Kuwait</a>
+             <a href="#" class="block hover:text-green-200 text-lg">Philippines</a>
+             <a href="#" class="block hover:text-green-200 text-lg">Qatar</a>
+             <a href="#" class="block hover:text-green-200 text-lg">Türkiye</a>
+             <a href="#" class="block hover:text-green-200 text-lg">UAE</a>
       </ul>
 
-      <!-- International Locations -->
-      <ul class="text-sm text-black space-y-2 w-1/2">
-        <li class="text-lg font-bold mt-2 hover:text-purple-950">INTERNATIONAL</li>
-        <li><a href="#" class="block px-2 py-1 hover:text-purple-950">INDIA</a></li>
-        <li><a href="#" class="block px-2 py-1 hover:text-purple-950">JORDAN</a></li>
-        <li><a href="#" class="block px-2 py-1 hover:text-purple-950">KUWAIT</a></li>
-        <li><a href="#" class="block px-2 py-1 hover:text-purple-950">AMERICA</a></li>
-      </ul>
 
-    </div>
-  </div>
+     </div>
+      </div>
+      <div class="group relative">
+      <a href="#" class="flex hover:text-green-200  items-center font-semibold text-xl">ABOUT US
+          <svg class="-mr-1 size-5 text-black hover:text-green-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+              <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+            </svg>
+      </a>
+
+      <div class="shadow-lg left-0 bg-white  fixed w-screen hidden group-hover:flex pt-20 pb-10 space-x-20 ps-4 z-50">
+        <ul>
+          <a href="#" class="block hover:text-green-200 text-xl font-semibold">ABOUT US</a>
+          <a href="#" class="block hover:text-green-200 text-lg">Our Story</a>
+          <a href="#" class="block hover:text-green-200 text-lg">Careers</a>
+          <a href="#" class="block hover:text-green-200 text-lg">Newsroom</a>
+        </ul>
+        <ul>
+          <a href="#" class="block hover:text-green-200 text-xl font-semibold">CONTACT US</a>
+        </ul>
+        <ul>
+          <a href="#" class="block hover:text-green-200 text-xl font-semibold">HELP CENTER</a>
+
+        </ul>
+      </div>
+      </div>
+  </ul>
+  
+
 </div>
-               <!-- About Us -->
-<div class="secondcontent hidden md:flex space-x-6">
-  <div class="relative group inline-block text-left">
-    <!-- Trigger -->
-    <a href="#" class="font-bold text-md flex items-center hover:text-red-950">
-      ABOUT US
-      <svg class="w-3 h-3 ms-2 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m1 1 4 4 4-4" />
-      </svg>
-    </a>
 
-    <!-- Dropdown -->
-    <div class="absolute left-0 mt-2 z-50 hidden group-hover:block bg-blue-50 w-[300px] shadow-md">
-      <ul class="py-2 text-sm text-black">
-        <li><a href="#" class="block px-4 py-2 text-lg font-bold hover:text-green-500"><u>ABOUT</u></a></li>
-        <li><a href="#" class="block px-4 py-2 hover:text-green-500">OUR STORY</a></li>
-        <li><a href="#" class="block px-4 py-2 hover:text-green-500">CAREERS</a></li>
-        <li><a href="#" class="block px-4 py-2 hover:text-green-500">NEWSROOM</a></li>
-        <li><a href="#" class="block px-4 py-2 text-lg font-bold hover:text-green-500"><u>CONTACT</u></a></li>
-        <li><a href="#" class="block px-4 py-2 text-lg font-bold hover:text-green-500"><u>HELP CENTER</u></a></li>
-      </ul>
-    </div>
-  </div>
+<div class="space-x-3 z-50">
+  <button class="bg-purple-300  font-bold text-xl px-10 py-4 rounded-full hover:bg-purple-900 hover:text-purple-400">ORDER ASAP</button>
+  <span><i class="fa-solid fa-magnifying-glass border-2 border-black border-solid rounded-full px-2 py-2 hover:cursor-pointer"></i></span>       
+  <span><i class="fa-regular fa-user border-3 border-2 border-black border-solid   rounded-full p-2 hover:cursor-pointer"></i></span>  
+  <span><i class="fa-solid fa-cart-shopping border-2 border-black border-solid  border-3 rounded-full p-2 hover:cursor-pointer"></i></span> 
+</div>
 </div>
 
-    <a href="#" class="bg-purple-200 px-4 py-2 rounded-full text-center text-black hover:bg-purple-600 mt-2 md:mt-0">Order ASAP</a>
-  </nav>
+<!---carousel-->
+<div id="controls-carousel" class="relative w-full mt-20 overflow-hidden" data-carousel="static">
 
-
-  <!-- Icons -->
-  <div class="flex space-x-3 mt-4 md:mt-0">
-    <i class="fa fa-search border border-black w-8 h-8 flex items-center justify-center rounded-full hover:text-pink-700"></i>
-    <i class="fa fa-user-o border border-black w-8 h-8 flex items-center justify-center rounded-full hover:text-pink-700"></i>
-    <i class="fa fa-shopping-cart border border-black w-8 h-8 flex items-center justify-center rounded-full hover:text-pink-700"></i>
-  </div>
-</header>
-<div id="controls-carousel" class="relative w-full mt-20" data-carousel="static">
-  <!-- Carousel wrapper -->
   <div class="relative h-56 overflow-hidden rounded-lg md:h-[700px]">
     <!-- Item 1 -->
     <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
@@ -326,7 +324,7 @@
           <h3 class="text-xs sm:text-sm md:text-base mt-2 leading-snug">
             To celebrate the launch of our newest handbook, we're hosting a contest for home bakeries. To enter and for our Ts+Cs, click below.
           </h3>
-      a
+      
           <div class="pt-6 mb-3">
             <a href="#" class="inline-block bg-indigo-950 text-sky-100 text-sm sm:text-base font-serif px-4 py-2 sm:px-6 sm:py-3 rounded-md hover:bg-white hover:text-black transition">
               ENTER NOW
@@ -398,9 +396,9 @@
   </div>
 
   <!-- Carousel -->
-  <div id="image-slider" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-4 ">
+  <div id="image-slider" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-4 lg:overflow-x-hidden">
     <!-- Slide -->
-    <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
+     <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
       <img src="cherry.jpg" class="w-64 h-80 object-cover rounded-lg" />
       <p class="py-2 text-2xl font-serif">CHERRYSTAR</p>
     </div>
@@ -471,7 +469,7 @@
 
     <div class="flex flex-wrap justify-center gap-6 mt-4">
       <div class="w-40 sm:w-60">
-        <img src="c1.jpeg" alt="Chocolate Cake" class="w-full h-40 sm:h-60 object-cover rounded-md" />
+        <img src="assets/c2.jpeg" alt="Chocolate Cake" class="w-full h-40 sm:h-60 object-cover rounded-md" />
         <p class="mt-2 text-gray-900">CHOCOLATE CAKE</p>
       </div>
       <div class="w-40 sm:w-60">
@@ -573,71 +571,79 @@
   </div>
 </div>
 <!-- Footer Section -->
-<footer class="bg-green-500 text-black px-4 py-10 font-sans">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-
-    <!-- Column 1 -->
-    <div>
-      <img src="logo.png" alt="Logo" class="w-24 mb-4 bg-transparent" />
-      <ul class="space-y-1">
-        <li><a href="#" class="block hover:underline">CAREERS</a></li>
-        <li><a href="#" class="block hover:underline">PRESS</a></li>
-        <li><a href="#" class="block hover:underline">INTERNATIONAL PURCHASE</a></li>
-        <li><a href="#" class="block hover:underline">GIFT CARDS</a></li>
-        <li><a href="#" class="block hover:underline">SUBSCRIPTION</a></li>
-        <li><a href="#" class="block hover:underline">GIVING BACK</a></li>
-      </ul>
+<div class="bg-green-400">
+  <div class="py-10 px-4 md:px-10">
+    <!-- Logo -->
+    <div class="mb-8 text-center md:text-left">
+      <img src="logo.png" alt="Logo" class="mx-auto md:mx-0 size-[150px] hover:cursor-pointer">
     </div>
 
-    <!-- Column 2 -->
-    <div>
-      <ul class="space-y-1">
-        <li><a href="#" class="block hover:underline">HELP CENTER</a></li>
-        <li><a href="#" class="block hover:underline">REFUND AND RETURNS</a></li>
-        <li><a href="#" class="block hover:underline">LOYALTY REWARDS</a></li>
-        <li><a href="#" class="block hover:underline">WHOLESALE</a></li>
-        <li><a href="#" class="block hover:underline">NEWSROOM</a></li>
-        <li><a href="#" class="block hover:underline">ENTER OUR SALE</a></li>
-      </ul>
-    </div>
+    <!-- Links Section -->
+    <div class="flex flex-col lg:flex-row justify-between space-y-10 lg:space-y-0 lg:space-x-10 text-lg md:text-xl">
+      <!-- First Column -->
+      <div class="space-y-5">
+        <a href="#" class="block hover:text-gray-400">CAREERS</a>
+        <a href="#" class="block hover:text-gray-400">PRESS</a>
+        <a href="#" class="block hover:text-gray-400">INTERNATIONAL FRANCHISE</a>
+        <a href="#" class="block hover:text-gray-400">GIFT CARDS</a>
+        <a href="#" class="block hover:text-gray-400">SUBSCRIPTION</a>
+        <a href="#" class="block hover:text-gray-400">GIVING BACK</a>
+      </div>
 
-    <!-- Column 3 -->
-    <div>
-      <ul class="space-y-1">
-        <li><a href="#" class="block hover:underline">HAVE A QUESTION</a></li>
-        <li><a href="#" class="block hover:underline">WE ARE ALWAYS HERE TO HELP</a></li>
-        <li><a href="#" class="block hover:underline">CONSUMER CARE HOURS (MON–FRI, 9AM–5PM EST)</a></li>
-        <li><a href="#" class="block hover:underline">CONTACT US</a></li>
-      </ul>
+      <!-- Second Column -->
+      <div class="space-y-5">
+        <a href="#" class="block hover:text-gray-400">HELP CENTER</a>
+        <a href="#" class="block hover:text-gray-400">REFUNDS & RETURNS</a>
+        <a href="#" class="block hover:text-gray-400">LOYALTY REWARDS PROGRAM</a>
+        <a href="#" class="block hover:text-gray-400">LOYALTY REWARDS PROGRAM TERMS</a>
+        <a href="#" class="block hover:text-gray-400">WHOLESALE</a>
+        <a href="#" class="block hover:text-gray-400">NEWSROOM</a>
+        <a href="#" class="block hover:text-gray-400">ENTER OUR BAKE SALE</a>
+      </div>
 
-      <!-- Social Icons -->
-      <div class="flex space-x-4 mt-6 text-xl w-64">
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-        <a href="#"><i class="fa-brands fa-google-play"></i></a>
+      <!-- Contact Info -->
+      <div class="text-center lg:text-left">
+        <p class="text-3xl font-bold" style="font-family: times new roman;">Have a question?</p>
+        <p class="mt-5" style="font-family: times new roman;">We're always here to lend a helping hand.</p>
+        <p class="mt-5" style="font-family: times new roman;">Consumer Care Team hours are <br>Monday-Friday, 9am - 5pm EST</p>
+        <a href="#" class="block font-semibold text-xl hover:text-gray-400 mt-3">CONTACT US</a>
+        <!-- Social Icons -->
+        <div class="flex justify-center lg:justify-start mt-7 space-x-5 text-3xl">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-square-instagram"></i>
+          <i class="fa-brands fa-pinterest"></i>
+          <i class="fa-brands fa-square-twitter"></i>
+        </div>
       </div>
     </div>
 
-    <!-- Column 4 -->
-    <div class="space-y-6">
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:underline">DO NOT SELL MY INFORMATION</a></li>
-        <li><a href="#" class="hover:underline">PRIVACY POLICY</a></li>
-        <li><a href="#" class="hover:underline">TERMS OF SERVICE</a></li>
-        <li><a href="#" class="hover:underline">ACCESSIBILITY STATEMENT</a></li>
-      </ul>
-
-      <!-- Payment Icons -->
-      <div class="flex space-x-4 text-2xl w-60">
-        <i class="fa-brands fa-cc-visa"></i>
-        <i class="fa-brands fa-cc-mastercard"></i>
-        <i class="fa-solid fa-earth-americas"></i>
-        <i class="fa-brands fa-cc-discover"></i>
-        <i class="fa-brands fa-pied-piper-hat"></i>
-      </div>
+    <!-- Bottom Links -->
+    <div class="flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 mt-10 text-xl">
+      <a href="#" class="hover:text-gray-400">DO NOT SELL MY INFORMATION</a>
+      <a href="#" class="hover:text-gray-400">PRIVACY POLICY</a>
+      <a href="#" class="hover:text-gray-400">TERMS OF SERVICE</a>
+      <a href="#" class="hover:text-gray-400">ACCESSIBILITY STATEMENT</a>
     </div>
+
+    <!-- Payment Icons -->
+    <div class="flex justify-center md:justify-end mt-8 text-3xl space-x-4">
+      <i class="fa-brands fa-cc-visa"></i>
+      <i class="fa-solid fa-earth-americas"></i>
+      <i class="fa-brands fa-cc-mastercard"></i>
+    </div>
+  </div>
+</div>
+
+    <div class="fixed lg:right-20 lg:bottom-20 right-10 bottom-10   z-30">
+      <div class="chaticon bg-purple-300 w-14 pl-3 rounded-full px-2 py-2 hover:bg-gray-200">
+        <i class="fa-brands fa-rocketchat text-3xl "></i>
+      </div>
+      
+      
+      <div class="fixed lg:right-16 lg:bottom-8 left-8 bottom-5   z-30">
+        <div class="chaticon bg-green-300 w-14 pl-3 rounded-full px-2 py-2 hover:bg-gray-200">
+        <i class="fa-solid fa-cookie-bite text-3xl"></i> 
+        </div>
     
   </div>
 </footer>
@@ -647,7 +653,6 @@
   const slider = document.getElementById('image-slider');
   const leftBtn = document.getElementById('slider-button-left');
   const rightBtn = document.getElementById('slider-button-right');
-
   leftBtn.addEventListener('click', () => {
     slider.scrollBy({ left: -300, behavior: 'smooth' });
   });
@@ -655,6 +660,8 @@
   rightBtn.addEventListener('click', () => {
     slider.scrollBy({ left: 300, behavior: 'smooth' });
   });
+
+
 
   // Get the close button and the overlay
   const closeBtn = document.querySelector(".absolute.top-4.right-4");
