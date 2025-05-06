@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="input.css">
+  <script src="menu.js"></script>
 
 </head> 
 
@@ -43,7 +44,7 @@
 <div class="bg-black py-3  ">
   <p class="text-white text-center  font-medium hover:text-green-200 hover:cursor-pointer">ORDER DESSERTS FOR LOCAL PICK UP</p>
 </div>
-<div class="flex px-5 py-5  justify-between items-center z-500  left-0 right-0 top-7.5  bg-white  ">
+<div class="flex px-5 py-5  lg:justify-between ;g:items-center z-500  left-0 right-0 top-7.5  bg-white text-center justify-center ml-36  ">
 <div class="flex space-x-5 items-center ">
   <div class="logo  hover:cursor-pointer z-50">
   <div class="text-center ">
@@ -54,10 +55,15 @@
   </div>
   </div>
   
-   
+  <!-- Hamburger Icon (Mobile Only) -->
+  <button id="menu-btn" class="block md:hidden focus:outline-none hamburger absolute left-0 ">
+    <span class="hamburger-top"></span>
+    <span class="hamburger-middle"></span>
+    <span class="hamburger-bottom"></span>
+  </button> 
   <ul class="space-x-5  flex   ">
-      <div class="group relative ">
-      <a href="#" class="flex hover:text-green-200 relative font-semibold text-xl items-center  ">ORDER
+      <div class="group relative "> 
+      <a href="#" class="flex hover:text-green-200 relative font-semibold text-xl items-center hidden md:flex ">ORDER
           <svg class="-mr-1 size-5 text-black hover:text-green-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
               <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
             </svg>
@@ -75,7 +81,7 @@
       </div>
       
       <div class="group relative">
-      <a href="#" class="flex hover:text-green-200 relative font-semibold text-xl items-center">PRODUCTS
+      <a href="#" class="flex hover:text-green-200 relative font-semibold text-xl items-center hidden md:flex ">PRODUCTS
           <svg class="-mr-1 size-5 text-black hover:text-green-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
               <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
             </svg>
@@ -112,7 +118,7 @@
        <ul class="flex space-x-3 mx-5 ms-20">
         <a href="#">
           <img src="frozen_banana_pudding[1].jpg" alt="" class="w-[170px] h-[170px] rounded-xl">
-          <p class="text-lg w-42 text-center pt-2 hover:text-green-200">New! Gopuff <br> Exclusive <br> Puff’rnutter Cupcake</p>
+          <p class="text-lg w-42 text-center pt-2 hover:text-green-200">New! Gopuff <br> Exclusive <br> Puffrnutter Cupcake</p>
       </a>
         <a href="#">
           <img src="gopuff[1].jpg" alt="" class="w-[170px] h-[170px] rounded-xl">
@@ -129,7 +135,7 @@
       </div>
       </div>
       <div class="group relative">
-      <a href="#" class="flex hover:text-green-200 font-semibold text-xl items-center">HOURS & LOCATION
+      <a href="#" class="flex hover:text-green-200 font-semibold text-xl items-center hidden md:flex ">HOURS & LOCATION
           <svg class="-mr-1 size-5 text-black hover:text-green-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
               <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
             </svg>
@@ -166,7 +172,7 @@
      </div>
       </div>
       <div class="group relative">
-      <a href="#" class="flex hover:text-green-200  items-center font-semibold text-xl">ABOUT US
+      <a href="#" class="flex hover:text-green-200  items-center font-semibold text-xl hidden md:flex ">ABOUT US
           <svg class="-mr-1 size-5 text-black hover:text-green-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
               <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
             </svg>
@@ -194,12 +200,36 @@
 </div>
 
 <div class="space-x-3 z-50">
-  <button class="bg-purple-300  font-bold text-xl px-10 py-4 rounded-full hover:bg-purple-900 hover:text-purple-400">ORDER ASAP</button>
-  <span><i class="fa-solid fa-magnifying-glass border-2 border-black border-solid rounded-full px-2 py-2 hover:cursor-pointer"></i></span>       
-  <span><i class="fa-regular fa-user border-3 border-2 border-black border-solid   rounded-full p-2 hover:cursor-pointer"></i></span>  
+  <button class="bg-purple-300  font-bold text-xl px-10 py-4 rounded-full hover:bg-purple-900 hover:text-purple-400 hidden md:flex ">ORDER ASAP</button>
+  <span><i class="fa-solid fa-magnifying-glass border-2 border-black border-solid rounded-full px-2 py-2 hover:cursor-pointer hidden md:flex "></i></span>       
+  <span><i class="fa-regular fa-user border-3 border-2 border-black border-solid   rounded-full p-2 hover:cursor-pointer hidden md:flex "></i></span>  
   <span><i class="fa-solid fa-cart-shopping border-2 border-black border-solid  border-3 rounded-full p-2 hover:cursor-pointer"></i></span> 
 </div>
 </div>
+<!-- Overlay Background -->
+<div class="overlay fixed inset-0 bg-black bg-opacity-50 z-40 hidden">
+  <!-- Mobile Menu (inside overlay) -->
+  <div id="menu"
+    class="md:hidden flex flex-col px-10 justify-left space-y-4 py-6 bg-white shadow-md mt-4 w-full text-left z-50 relative"
+    style="font-size: 21px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+    
+    <button class="close-overlay-btn absolute top-4 left-4 text-2xl">✕</button>
+
+    <input type="text" placeholder="search" class="rounded-xl w-60">
+
+    <a href="#" class="hover:text-orange-700">ORDER</a>
+    <a href="#" class="hover:text-orange-700">PRODUCTS</a>
+    <a href="#" class="hover:text-orange-700">HOURS & LOCATION</a>
+    <a href="#" class="hover:text-orange-700">ABOUT US</a>
+
+    <a href="#" class="p-3 px-6 pt-2 text-white bg-purple-300 rounded-full hover:bg-purple-700 w-60">ORDER ASAP</a>
+
+    <div class="account-icon">
+      <i class="fa fa-user-circle text-4xl hover:text-blue-700"></i>
+    </div>
+  </div>
+</div>
+
 
 <!---carousel-->
 <div id="controls-carousel" class="relative w-full mt-20 overflow-hidden" data-carousel="static">
@@ -427,7 +457,7 @@
       <p class="py-2 text-2xl font-serif">SONPOP</p>
     </div>
     <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
-      <img src="c7.jpg" class="w-64 h-80 object-cover rounded-lg" />
+      <img src="assets/c7.jpg" class="w-64 h-80 object-cover rounded-lg" />
       <p class="py-2 text-2xl font-serif">PALCOVA</p>
     </div>
     <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
@@ -469,7 +499,7 @@
 
     <div class="flex flex-wrap justify-center gap-6 mt-4">
       <div class="w-40 sm:w-60">
-        <img src="assets/c2.jpeg" alt="Chocolate Cake" class="w-full h-40 sm:h-60 object-cover rounded-md" />
+        <img src="c2.jpeg" alt="Chocolate Cake" class="w-full h-40 sm:h-60 object-cover rounded-md" />
         <p class="mt-2 text-gray-900">CHOCOLATE CAKE</p>
       </div>
       <div class="w-40 sm:w-60">
@@ -508,7 +538,7 @@
   <div class="flex flex-col md:flex-row md:flex-wrap gap-6 items-center justify-center">
     
     <div class="w-80 md:w-96 h-72">
-      <img src="example1.jpg" alt="Chocolate Cake" class="w-full h-60 object-cover rounded-md" />
+      <img src=example1.jpg" alt="Chocolate Cake" class="w-full h-60 object-cover rounded-md" />
       <p class="mt-2 text-gray-900 text-center text-lg font-bold">ADVANCE ORDER LOCAL PICKUP</p>
     </div>
 
@@ -648,7 +678,8 @@
   </div>
 </footer>
 
-<!-- JS Scroll Buttons -->
+
+
 <script>
   const slider = document.getElementById('image-slider');
   const leftBtn = document.getElementById('slider-button-left');
@@ -673,5 +704,24 @@
   };
 
 </script>
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+  
+  const closeBtn = document.querySelector(".absolute.top-4.left-4");
+  const overlay = document.querySelector(".fixed.inset-0");
+
+
+  closeBtn.onclick = () => {
+    overlay.style.display = "none";
+
+  };
+</script> 
+
+
  </body>
  </html>
