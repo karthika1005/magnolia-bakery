@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Magnolia Bakery</title>
+  <title>Magnolia Bakery Menu</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Flowbite & Swiper -->
   <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <link rel="stylesheet" href="input.css">
-  <script src="menu.js"></script>
+</head>
+<body class="bg-white font-sans">
 
-</head> 
 
-
-<body class="font-sans">
-  <!-- Background--->
+      <!-- Background--->
  <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
 
   <div class="bg-white rounded-2xl p-6 w-11/12 max-w-md shadow-xl relative">
@@ -40,82 +44,104 @@
     </div>
   </div>
 </div>
-<!--header section-->
-<div class="bg-black py-3  ">
+
+  <!-- Header -->
+   <div class="bg-black py-6  ">
   <p class="text-white text-center  font-medium hover:text-green-200 hover:cursor-pointer">ORDER DESSERTS FOR LOCAL PICK UP</p>
 </div>
-<div class="flex px-5 py-5  lg:justify-between ;g:items-center z-500  left-0 right-0 top-7.5  bg-white text-center justify-center ml-36  ">
-<div class="flex space-x-5 items-center ">
-  <div class="logo  hover:cursor-pointer z-50">
-  <div class="text-center ">
-      <h1 class="font-bold text-xl ">MAGNOLIA </h1>
+  <header class="flex items-center justify-between p-4">
+    <button id="menuToggle" class="text-2xl md:hidden">
+      &#9776;
+    </button>
+    <div class="text-center  ">
+      <h1 class="text-2xl font-bold">MAGNOLIA <br><span class="text-sm font-normal ">EST. BAKERY 1996</span></h1>
+    </div>
+    <button class="text-2xl md:hidden">
+      <i class="fas fa-shopping-cart"></i>
+    </button>
+  </header>
+
+  <!-- Search (Mobile Only) -->
+  <div class="p-4 border-b flex items-center md:hidden">
+    <span class="mr-2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+</svg>
+
+    </span>
+    <input type="text" placeholder="SEARCH OUR STORE" class="w-full border-none outline-none text-gray-500" />
   </div>
-  <div class="flex  justify-center -top-3">
-         <span class="font-medium " style="font-size: 8px;">ESC.</span><h1 class="font-bold text-xl px-1 -mt-2">BAKERY</h1><span class="font-medium" style="font-size: 8px;">1996</span>
-  </div>
-  </div>
-  
-  <!-- Hamburger Icon (Mobile Only) -->
-  <button id="menu-btn" class="block md:hidden focus:outline-none hamburger absolute left-0 ">
-    <span class="hamburger-top"></span>
-    <span class="hamburger-middle"></span>
-    <span class="hamburger-bottom"></span>
-  </button> 
-  <ul class="space-x-5  flex   ">
-      <div class="group relative "> 
-      <a href="#" class="flex hover:text-green-200 relative font-semibold text-xl items-center hidden md:flex ">ORDER
-          <svg class="-mr-1 size-5 text-black hover:text-green-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-              <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-            </svg>
-      </a>
-      <div class="shadow-lg left-0 bg-white   fixed w-screen hidden group-hover:block pt-20 pb-8 space-y-2 ps-4 z-50">
+
+
+
+  <!-- Mobile Menu -->
+  <nav id="mobileMenu" class="p-4 space-y-2 md:hidden hidden ">
+    <div>
+      <button class="w-full flex justify-between items-center py-2 font-semibold text-gray-800" onclick="toggleDropdown('order')">
+        ORDER <span>
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+</svg>
+
+
+        </span>
+      </button>
+      <div id="order" class="hidden pl-4 text-gray-600">
+     
+      
           
-          <a href="#" class="block font-semibold text-xl hover:text-green-200 ">ORDER</a>
-          <a href="#" class="block hover:text-green-200 text-lg">Advanced Order for Local Pick Up</a>
-          <a href="#" class="block hover:text-green-200 text-lg">Same Day Pick Up or Delivery</a>
-          <a href="#" class="block hover:text-green-200 text-lg">Nationwide Shipping</a>
-          <a href="#" class="block hover:text-green-200 text-lg">Corporate Catering</a>
-          <a href="#" class="block hover:text-green-200 text-lg">Gifting & Events</a>
+          <a href="#" class="block font-semibold text-xl hover:text-green-200 underline">ORDER</a>
+          <a href="#" class="block hover:text-blue-950 text-sm p-1">Advanced Order for Local Pick Up</a>
+          <a href="#" class="block hover:text-blue-950 text-sm p-1">Same Day Pick Up or Delivery</a>
+          <a href="#" class="block hover:text-blue-950 text-sm p-1">Nationwide Shipping</a>
+          <a href="#" class="block hover:text-blue-950 text-sm p-1">Corporate Catering</a>
+          <a href="#" class="block hover:text-blue-950 text-sm p-1">Gifting & Events</a>
 
       </div>
       </div>
-      
-      <div class="group relative">
-      <a href="#" class="flex hover:text-green-200 relative font-semibold text-xl items-center hidden md:flex ">PRODUCTS
-          <svg class="-mr-1 size-5 text-black hover:text-green-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-              <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-            </svg>
-      </a>
-      <div class="shadow-lg left-0 bg-white  fixed w-screen hidden group-hover:flex space-x-10 pt-20 pb-10  ps-4 z-50">
-         <ul class="space-y-2"> 
-      <a href="#" class="block font-semibold  hover:text-green-200 text-xl">SHOP BAKERY PRODUCTS</a>
-       <a href="#" class="block hover:text-green-200 text-lg"> Fresh Banana Pudding</a>
-       <a href="#" class="block hover:text-green-200 text-lg">Brownies & Bars</a>
-       <a href="#" class="block hover:text-green-200 text-lg">Cakes</a>
-       <a href="#" class="block hover:text-green-200 text-lg">Cheesecakes</a>
-       <a href="#" class="block hover:text-green-200 text-lg">Cookies</a>
-       <a href="#" class="block hover:text-green-200 text-lg">Cupcakes</a>
-       <a href="#" class="block hover:text-green-200 text-lg">Icebox Desserts</a>
-       <a href="#" class="block hover:text-green-200 text-lg">In-Store Gift Cards</a>
-      <a href="#" class="block hover:text-green-200 text-lg"> Online Only Gift Cards</a>
+    </div>
+
+    <div class="border-b">
+      <button class="w-full flex justify-between items-center py-2 font-semibold text-gray-800" onclick="toggleDropdown('products')">
+        PRODUCTS <span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+</svg>
+
+        </span>
+      </button>
+      <div id="products" class="hidden pl-4 text-gray-600">
+        
+         <ul class="space-y-2 p-1"> 
+      <a href="#" class="block font-semibold  hover:text-green-200 text-xl underline">SHOP BAKERY PRODUCTS</a>
+       <a href="#" class="block hover:text-pink-900 text-sm"> Fresh Banana Pudding</a>
+       <a href="#" class="block hover:text-pink-900 text-sm">Brownies & Bars</a>
+       <a href="#" class="block hover:text-pink-900 text-sm">Cakes</a>
+       <a href="#" class="block hover:text-pink-900 text-sm">Cheesecakes</a>
+       <a href="#" class="block hover:text-pink-900 text-sm">Cookies</a>
+       <a href="#" class="block hover:text-pink-900 text-sm">Cupcakes</a>
+       <a href="#" class="block hover:text-pink-900 text-sm">Icebox Desserts</a>
+       <a href="#" class="block hover:text-pink-900 text-sm">In-Store Gift Cards</a>
+      <a href="#" class="block   hover:text-pink-900  text- sm"> Online Only Gift Cards</a>
          </ul>
-       <ul class="space-y-2 mt-10" >
-              <a href="#" class="block hover:text-green-200 text-lg">Merchandise</a>
-              <a href="#" class="block hover:text-green-200 text-lg">Pudding of the Month</a>
-              <a href="#" class="block hover:text-green-200 text-lg">Pudding Club Subscription</a>
-              <a href="#" class="block hover:text-green-200 text-lg"> Sampler Packs</a>
-              <a href="#" class="block hover:text-green-200 text-lg"> Birthdays 🎂</a>
-              <a href="#" class="block hover:text-green-200 text-lg">Spring Treats 🌸 </a>
-              <a href="#" class="block hover:text-green-200 text-lg">Graduation Gifts 🎓 </a>
+       <ul class="space-y-2 mt-10 p-1" >
+              <a href="#" class="block hover:text-pink-800 text-sm">Merchandise</a>
+              <a href="#" class="block hover:text-pink-800 text-sm">Pudding of the Month</a>
+              <a href="#" class="block hover:text-pink-800 text-sm">Pudding Club Subscription</a>
+              <a href="#" class="block hover:text-pink-800 text-sm"> Sampler Packs</a>
+              <a href="#" class="block hover:text-pink-800 text-sm"> Birthdays 🎂</a>
+              <a href="#" class="block hover:text-pink-800 text-sm">Spring Treats 🌸 </a>
+              <a href="#" class="block hover:text-pink-800 text-sm">Graduation Gifts 🎓 </a>
        </ul>
-       <ul class="space-y-2">
-        <a href="#" class="block font-semibold  hover:text-green-200 text-xl">VIEW GROCERY PRODUCTS</a>
-       <a href="#" class="block hover:text-green-200 text-lg">Banana Pudding</a>
-       <a href="#" class="block hover:text-green-200 text-lg">Banana Pudding Cookies</a>
-       <a href="#" class="block hover:text-green-200 text-lg">DoorDash Exclusive Banana Pudding</a>
-       <a href="#" class="block hover:text-green-200 text-lg">Store Locator</a>
+       <ul class="space-y-2 p-1">
+        <a href="#" class="block font-semibold  hover:text-green-200 text-xl underline">VIEW GROCERY PRODUCTS</a>
+       <a href="#" class="block hover:text-pink-900  text-sm">Banana Pudding</a>
+       <a href="#" class="block hover:text-pink-900 text-sm">Banana Pudding Cookies</a>
+       <a href="#" class="block hover:text-pink-900 text-sm">DoorDash Exclusive Banana Pudding</a>
+       <a href="#" class="block hover:text-pink-900 text-sm">Store Locator</a>
        </ul>
-       <ul class="flex space-x-3 mx-5 ms-20">
+       <div class="flex  justify-center m-pink">
+       <ul  class="flex space-x-2">
         <a href="#">
           <img src="frozen_banana_pudding[1].jpg" alt="" class="w-[170px] h-[170px] rounded-xl">
           <p class="text-lg w-42 text-center pt-2 hover:text-green-200">New! Gopuff <br> Exclusive <br> Puffrnutter Cupcake</p>
@@ -129,112 +155,233 @@
         <p class="text-lg text-center w-40 pt-2 hover:text-green-200">New! Frozen-To-<br>Thaw Banana <br> Pudding</p></a>
 
        </ul>
+       </div>
 
 
 
       </div>
       </div>
-      <div class="group relative">
-      <a href="#" class="flex hover:text-green-200 font-semibold text-xl items-center hidden md:flex ">HOURS & LOCATION
-          <svg class="-mr-1 size-5 text-black hover:text-green-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-              <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-            </svg>
-      </a>
-      <div class="shadow-lg left-0 bg-white  fixed w-screen hidden group-hover:flex pt-20 pb-10  pl-5 z-50">
+    
+
+    <div class="border-b">
+      <button class="w-full flex justify-between items-center py-2 font-semibold text-gray-800" onclick="toggleDropdown('locations')">
+        HOURS & LOCATIONS <span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+</svg>
+
+        </span>
+      </button>
+      <div id="locations" class="hidden pl-4 text-gray-600">
+    
       <ul class="  space-y-2 "> 
-        <a href="#" class="block font-semibold  hover:text-green-200 text-xl">NEW YORK</a>
-        <a href="#" class="block hover:text-green-200 text-lg">Bleecker Street</a>
-      <a href="#" class="block hover:text-green-200 text-lg">Central Park South</a>
-      <a href="#" class="block hover:text-green-200 text-lg">Grand Central Terminal</a>
-      <a href="#" class="block hover:text-green-200 text-lg">Grand Central Madison</a>
-      <a href="#" class="block hover:text-green-200 text-lg">Hudson Yards</a>
-      <a href="#" class="block hover:text-green-200 text-lg">LaGuardia Airport Terminal C</a>
-      <a href="#" class="block hover:text-green-200 text-lg">Moynihan Train Hall/a>
-      <a href="#" class="block hover:text-green-200 text-lg">Rockefeller Center</a>
-     <a href="#" class="block hover:text-green-200 text-lg">Upper West Side</a>
+        <a href="#" class="block font-semibold  hover:text-green-200 text-xl underline m-3">NEW YORK</a>
+      <a href="#"class="block    text-lg">Bleecker Street</a>
+      <a href="#" class="block hover:text-yellow-900 text-lg">Central Park South</a>
+      <a href="#" class="block hover:text-yellow-900 text-lg">Grand Central Terminal</a>
+      <a href="#" class="block hover:text-yellow-900 text-lg">Grand Central Madison</a>
+      <a href="#" class="block hover:text-yellow-900 text-lg">Hudson Yards</a>
+      <a href="#" class="block hover:text-yellow-900 text-lg">LaGuardia Airport Terminal C</a>
+      <a href="#" class="block hover:text-yellow-900 text-lg">Moynihan Train Hall/a>
+      <a href="#" class="block hover:text-yellow-900 text-lg">Rockefeller Center</a>
+     <a href="#" class="block  hover:text-yellow-900 text-lg">Upper West Side</a>
         </ul>
-      <ul class="space-y-2 ms-40">
-             <a href="#" class="block hover:text-green-200  text-xl font-medium">CALIFORNIA</a>
-             <a href="#" class="block hover:text-green-200 text-lg">Los Angeles (West Hollywood)</a>
-             <a href="#" class="block hover:text-green-200  text-xl font-medium">ILLINOIS</a>
-             <a href="#" class="block hover:text-green-200 text-lg"> Chicago (Loop)</a>
-             <a href="#" class="block hover:text-green-200  text-xl font-medium"> INTERNATIONAL</a>
-             <a href="#" class="block hover:text-green-200 text-lg">India</a>
-             <a href="#" class="block hover:text-green-200 text-lg">Jordan</a>
-             <a href="#" class="block hover:text-green-200 text-lg">Kuwait</a>
-             <a href="#" class="block hover:text-green-200 text-lg">Philippines</a>
-             <a href="#" class="block hover:text-green-200 text-lg">Qatar</a>
-             <a href="#" class="block hover:text-green-200 text-lg">Türkiye</a>
-             <a href="#" class="block hover:text-green-200 text-lg">UAE</a>
+      <ul class="space-y-2 ">
+             <a href="#" class="block hover:text-pink-600  text-xl font-medium underline m-3">CALIFORNIA</a>
+             <a href="#" class="block hover:text-pink-600 text-lg">Los Angeles (West Hollywood)</a>
+             <a href="#" class="block hover:text-pink-600  text-xl font-medium underline m-3">ILLINOIS</a>
+             <a href="#" class="block hover:text-pink-600 text-lg"> Chicago (Loop)</a>
+             <a href="#" class="block hover:text-pink-600  text-xl font-medium underline m-3"> INTERNATIONAL</a>
+             <a href="#" class="block hover:text-pink-600 text-lg">India</a>
+             <a href="#" class="block hover:text-pink-600 text-lg">Jordan</a>
+             <a href="#" class="block hover:text-pink-600 text-lg">Kuwait</a>
+             <a href="#" class="block hover:text-pink-600 text-lg">Philippines</a>
+             <a href="#" class="block hover:text-pink-600 text-lg">Qatar</a>
+             <a href="#" class="block hover:text-pink-600 text-lg">Türkiye</a>
+             <a href="#" class="block hover:text-pink-600 text-lg">UAE</a>
       </ul>
 
 
      </div>
-      </div>
-      <div class="group relative">
-      <a href="#" class="flex hover:text-green-200  items-center font-semibold text-xl hidden md:flex ">ABOUT US
-          <svg class="-mr-1 size-5 text-black hover:text-green-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-              <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-            </svg>
-      </a>
+    </div>
 
-      <div class="shadow-lg left-0 bg-white  fixed w-screen hidden group-hover:flex pt-20 pb-10 space-x-20 ps-4 z-50">
+    <div class="border-b">
+      <button class="w-full flex justify-between items-center py-2 font-semibold text-gray-800" onclick="toggleDropdown('about')">
+        ABOUT US <span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+</svg>
+
+        </span>
+      </button>
+      <div id="about" class="hidden pl-4 text-gray-600">
+          
         <ul>
-          <a href="#" class="block hover:text-green-200 text-xl font-semibold">ABOUT US</a>
-          <a href="#" class="block hover:text-green-200 text-lg">Our Story</a>
-          <a href="#" class="block hover:text-green-200 text-lg">Careers</a>
-          <a href="#" class="block hover:text-green-200 text-lg">Newsroom</a>
+          <a href="#" class="block hover:text-red-800 text-xl font-semibold underline m-3">ABOUT US</a>
+          <a href="#" class="block hover:text-red-800 text-lg">Our Story</a>
+          <a href="#" class="block hover:text-red-800 text-lg">Careers</a>
+          <a href="#" class="block hover:text-red-800 text-lg">Newsroom</a>
         </ul>
         <ul>
-          <a href="#" class="block hover:text-green-200 text-xl font-semibold">CONTACT US</a>
-        </ul>
-        <ul>
-          <a href="#" class="block hover:text-green-200 text-xl font-semibold">HELP CENTER</a>
+          <a href="#" class="block hover:text-red-800 text-xl font-semibold underline m-5">CONTACT US</a>
+
+          <a href="#" class="block hover:text-red-800 text-xl font-semibold underline m-5">HELP CENTER</a>
 
         </ul>
       </div>
-      </div>
-  </ul>
+    </div>
+
+    <!-- Order ASAP Button -->
+    <div class="py-4">
+      <button class="bg-blue-600 text-white font-bold py-2 px-4 rounded-full w-full hover:bg-purple-950">ORDER ASAP</button>
+    </div>
+
+    <!-- Login -->
+    <div class="flex items-center space-x-2 font-semibold text-gray-800">
+      <i class="fas fa-user"></i>
+      <span>LOGIN</span>
+    </div>
+  </nav> 
+ 
+
+<!-- Desktop Menu -->
+
+<nav class="hidden  md:flex space-x-8 p-1 justify-center items-center text-gray-800 font-semibold relative top-0 z-50  w-full  ">
   
-
-</div>
-
-<div class="space-x-3 z-50">
-  <button class="bg-purple-300  font-bold text-xl px-10 py-4 rounded-full hover:bg-purple-900 hover:text-purple-400 hidden md:flex ">ORDER ASAP</button>
-  <span><i class="fa-solid fa-magnifying-glass border-2 border-black border-solid rounded-full px-2 py-2 hover:cursor-pointer hidden md:flex "></i></span>       
-  <span><i class="fa-regular fa-user border-3 border-2 border-black border-solid   rounded-full p-2 hover:cursor-pointer hidden md:flex "></i></span>  
-  <span><i class="fa-solid fa-cart-shopping border-2 border-black border-solid  border-3 rounded-full p-2 hover:cursor-pointer"></i></span> 
-</div>
-</div>
-<!-- Overlay Background -->
-<div class="overlay fixed inset-0 bg-black bg-opacity-50 z-40 hidden">
-  <!-- Mobile Menu (inside overlay) -->
-  <div id="menu"
-    class="md:hidden flex flex-col px-10 justify-left space-y-4 py-6 bg-white shadow-md mt-4 w-full text-left z-50 relative"
-    style="font-size: 21px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-    
-    <button class="close-overlay-btn absolute top-4 left-4 text-2xl">✕</button>
-
-    <input type="text" placeholder="search" class="rounded-xl w-60">
-
-    <a href="#" class="hover:text-orange-700">ORDER</a>
-    <a href="#" class="hover:text-orange-700">PRODUCTS</a>
-    <a href="#" class="hover:text-orange-700">HOURS & LOCATION</a>
-    <a href="#" class="hover:text-orange-700">ABOUT US</a>
-
-    <a href="#" class="p-3 px-6 pt-2 text-white bg-purple-300 rounded-full hover:bg-purple-700 w-60">ORDER ASAP</a>
-
-    <div class="account-icon">
-      <i class="fa fa-user-circle text-4xl hover:text-blue-700"></i>
+  <!-- ORDER -->
+  <div class="group relative">
+    <button class="px-2 py-1">ORDER</button>
+    <div class="shadow-lg left-0 bg-white fixed w-screen hidden group-hover:block pt-20 pb-8 ps-4 z-50 space-y-2">
+      <a href="#" class="block font-semibold text-xl hover:text-green-200">ORDER</a>
+      <a href="#" class="block hover:text-yellow-900 text-lg">Advanced Order for Local Pick Up</a>
+      <a href="#" class="block hover:text-yellow-900 text-lg">Same Day Pick Up or Delivery</a>
+      <a href="#" class="block hover:text-yellow-900 text-lg">Nationwide Shipping</a>
+      <a href="#" class="block hover:text-yellow-900 text-lg">Corporate Catering</a>
+      <a href="#" class="block hover:text-yellow-900 text-lg">Gifting & Events</a>
     </div>
   </div>
+
+  <!-- PRODUCTS -->
+  <div class="group relative">
+    <button class="px-2 py-1">PRODUCTS</button>
+    <div class="shadow-lg left-0 bg-white fixed w-screen hidden group-hover:flex space-x-10 pt-20 pb-10 ps-4 z-50">
+      <ul class="space-y-2">
+        <a href="#" class="block font-semibold text-xl hover:text-green-200">SHOP BAKERY PRODUCTS</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Fresh Banana Pudding</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Brownies & Bars</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Cakes</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Cheesecakes</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Cookies</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Cupcakes</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Icebox Desserts</a>
+        <a href="#" class="block hover:text-red-800 text-lg">In-Store Gift Cards</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Online Only Gift Cards</a>
+      </ul>
+      <ul class="space-y-2 mt-10">
+        <a href="#" class="block hover:text-red-800 text-lg">Merchandise</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Pudding of the Month</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Pudding Club Subscription</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Sampler Packs</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Birthdays 🎂</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Spring Treats 🌸</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Graduation Gifts 🎓</a>
+      </ul>
+      <ul class="space-y-2">
+        <a href="#" class="block font-semibold text-xl hover:text-green-200">VIEW GROCERY PRODUCTS</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Banana Pudding</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Banana Pudding Cookies</a>
+        <a href="#" class="block hover:text-red-800 text-lg">DoorDash Exclusive Banana Pudding</a>
+        <a href="#" class="block hover:text-red-800 text-lg">Store Locator</a>
+      </ul>
+      <ul class="flex space-x-3 mx-5 ms-20">
+        <a href="#">
+          <img src="frozen_banana_pudding[1].jpg" alt="" class="w-[170px] h-[170px] rounded-xl">
+          <p class="text-lg w-42 text-center pt-2 hover:text-green-200">New! Gopuff <br> Exclusive <br> Puffrnutter Cupcake</p>
+        </a>
+        <a href="#">
+          <img src="gopuff[1].jpg" alt="" class="w-[170px] h-[170px] rounded-xl">
+          <p class="text-center text-lg pt-2 hover:text-green-200">Mother's Day Treats</p>
+        </a>
+        <a href="#">
+          <img src="treat-cake[1].jpg" alt="" class="w-[170px] h-[170px] rounded-xl">
+          <p class="text-lg text-center w-40 pt-2 hover:text-green-200">New! Frozen-To-<br>Thaw Banana <br> Pudding</p>
+        </a>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HOURS & LOCATIONS -->
+  <div class="group relative">
+    <button class="px-2 py-1">HOURS & LOCATIONS</button>
+    <div class="shadow-lg left-0 bg-white fixed w-screen hidden group-hover:flex pt-20 pb-10 pl-5 z-50">
+      <ul class="space-y-2">
+        <a href="#" class="block font-semibold text-xl hover:text-green-200">NEW YORK</a>
+        <a href="#" class="block hover:text-green-200 text-lg">Bleecker Street</a>
+        <a href="#" class="block hover:text-green-200 text-lg">Central Park South</a>
+        <a href="#" class="block hover:text-pink-900 text-lg">Grand Central Terminal</a>
+        <a href="#" class="block hover:text-pink-900 text-lg">Grand Central Madison</a>
+        <a href="#" class="block hover:text-pink-900 text-lg">Hudson Yards</a>
+        <a href="#" class="block hover:text-pink-900 text-lg">LaGuardia Airport Terminal C</a>
+        <a href="#" class="block hover:text-pink-900 text-lg">Moynihan Train Hall</a>
+        <a href="#" class="block hover:text-pink-900 text-lg">Rockefeller Center</a>
+        <a href="#" class="block hover:text-pink-900 text-lg">Upper West Side</a>
+      </ul>
+      <ul class="space-y-2 ms-40">
+        <a href="#" class="block font-medium text-xl hover:text-green-200">CALIFORNIA</a>
+        <a href="#" class="block hover:text-green-200 text-lg">Los Angeles (West Hollywood)</a>
+        <a href="#" class="block font-medium text-xl hover:text-green-200">ILLINOIS</a>
+        <a href="#" class="block hover:text-green-200 text-lg">Chicago (Loop)</a>
+        <a href="#" class="block font-medium text-xl hover:text-green-200">INTERNATIONAL</a>
+        <a href="#" class="block hover:text-green-900 text-lg">India</a>
+        <a href="#" class="block hover:text-green-900 text-lg">Jordan</a>
+        <a href="#" class="block hover:text-green-900 text-lg">Kuwait</a>
+        <a href="#" class="block hover:text-green-900 text-lg">Philippines</a>
+        <a href="#" class="block hover:text-green-900 text-lg">Qatar</a>
+        <a href="#" class="block hover:text-green-900 text-lg">Türkiye</a>
+        <a href="#" class="block hover:text-green-900 text-lg">UAE</a>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ABOUT US -->
+  <div class="group relative">
+    <button class="px-2 py-1">ABOUT US</button>
+    <div class="shadow-lg left-0 bg-white fixed w-screen hidden group-hover:flex pt-20 pb-10 space-x-20 ps-4 z-50">
+      <ul>
+        <a href="#" class="block hover:text-blue-950 text-xl font-semibold">ABOUT US</a>
+        <a href="#" class="block hover:text-blue-950 text-lg">Our Story</a>
+        <a href="#" class="block hover:text-blue-950 text-lg">Careers</a>
+        <a href="#" class="block hover:text-blue-950 text-lg">Newsroom</a>
+      </ul>
+      <ul>
+        <a href="#" class="block hover:text-green-200 text-xl font-semibold">CONTACT US</a>
+      </ul>
+      <ul>
+        <a href="#" class="block hover:text-green-200 text-xl font-semibold">HELP CENTER</a>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Buttons & Icons -->
+  <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded-full hover:bg-purple-950">ORDER ASAP</button>
+  <span><i class="fa-solid fa-magnifying-glass border-2 border-black rounded-full px-2 py-2 hover:cursor-pointer hidden md:flex"></i></span>
+  <span><i class="fa-regular fa-user border-2 border-black rounded-full p-2 hover:cursor-pointer hidden md:flex"></i></span>
+  <div class="flex items-center space-x-1">
+    <i class="fas fa-user"></i><span>LOGIN</span>
+  </div>
+</nav>
+
+<!-- Cookie Icon -->
+<div class="fixed bottom-4 left-4">
+  <button class="bg-green-500 text-white p-3 rounded-full shadow-lg text-xl">🍪</button>
 </div>
 
 
-<!---carousel-->
+<!-- carousel -->
+
 <div id="controls-carousel" class="relative w-full mt-20 overflow-hidden" data-carousel="static">
 
-  <div class="relative h-56 overflow-hidden rounded-lg md:h-[700px]">
+  <div class="relative h-56 overflow-hidden rounded-lg md:h-[900px]">
     <!-- Item 1 -->
     <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
       <img src="magnolia6.jpg" class="absolute block w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="Slide 1">
@@ -380,8 +527,10 @@
   </div>
 
   <!-- Navigation buttons -->
-  <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none -mt-10 lg:mt-[310px] lg:ml-24" data-carousel-prev>
-    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
+  <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none
+   -mt-10 lg:mt-[310px] lg:ml-24" data-carousel-prev>
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 
+     group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
       <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" fill="none" viewBox="0 0 6 10">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
       </svg>
@@ -389,8 +538,10 @@
     </span>
   </button>
 
-  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none -mt-10 ml-5  lg:mt-[310px] lg:pr-[890px]  " data-carousel-next >
-    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
+  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none 
+  -mt-10  ml-5 lg:pr-[1100px] lg:mt-[310px] lg:ml-24  " data-carousel-next >
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30
+ group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70">
       <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" fill="none" viewBox="0 0 6 10">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
       </svg>
@@ -398,21 +549,36 @@
     </span>
   </button>
 </div>
-<!-- Contents -->
-<div class="bg-gray-200 p-6">
-  <div class="grid gap-6">
-    <h1 class="font-serif text-center font-extrabold text-lg">Our Products</h1>
 
-    <p class="font-serif text-center font-medium px-6">
-      For more than 25 years, Magnolia Bakery has been making America's favorite baked goods the old-fashioned way: from scratch, in small batches, and using the finest ingredients.
+
+
+
+
+
+<!-- Contents -->
+<div class="p-4 sm:p-6 md:p-8 lg:p-10">
+  <div class="max-w-4xl mx-auto grid gap-4 sm:gap-6 text-center">
+    
+    <!-- Title -->
+    <h1 class="font-serif font-extrabold text-xl sm:text-2xl md:text-3xl">
+      Our Products
+    </h1>
+
+    <!-- Description -->
+    <p class="font-serif font-medium text-sm sm:text-base px-2 sm:px-6">
+      For more than 25 years, Magnolia Bakery has been making America's favorite baked goods the old-<br>fashioned way:
+      from scratch, in small batches, and using the finest ingredients.
     </p>
 
-   
+    <!-- Link or Call to Action -->
+    <h3 class="text-base sm:text-lg md:text-xl text-black font-bold hover:text-purple-950 py-2 cursor-pointer underline">
+      VIEW MORE
+    </h3>
+
   </div>
 </div>
-    </div>
-  </div>
-</div>
+
+    
 <!-- Responsive Image Carousel with Buttons second images sections-->
 <div class="fifthsection mt-10 px-5">
   <!-- Buttons -->
@@ -426,14 +592,14 @@
   </div>
 
   <!-- Carousel -->
-  <div id="image-slider" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-4 lg:overflow-x-hidden">
+  <div id="image-slider" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-4 lg:overflow-x-hidden bg-yellow-50">
     <!-- Slide -->
      <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
       <img src="cherry.jpg" class="w-64 h-80 object-cover rounded-lg" />
       <p class="py-2 text-2xl font-serif">CHERRYSTAR</p>
     </div>
     <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
-      <img src="c1.jpeg" class="w-64 h-80 object-cover rounded-lg" />
+      <img src="assets/c1.jpeg" class="w-64 h-80 object-cover rounded-lg" />
       <p class="py-2 text-2xl font-serif">CHOCOLATESLICE</p>
     </div>
     <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
@@ -445,7 +611,7 @@
       <p class="py-2 text-2xl font-serif">PURPIES</p>
     </div>
     <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
-      <img src="c4.jpeg" class="w-64 h-80 object-cover rounded-lg" />
+      <img src="assets/c4.jpeg" class="w-64 h-80 object-cover rounded-lg" />
       <p class="py-2 text-2xl font-serif">DREAM CAKE</p>
     </div>
     <div class="flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
@@ -486,8 +652,9 @@
     </div>
   </div>
 </div>
+
 <!-- Container: Bakery Section -->
-<div class="bg-green-300 p-6 sm:p-10 text-center">
+<div class="bg-green-50 p-6 sm:p-10 text-center">
   <div>
     <h1 class="text-lg sm:text-2xl text-black font-bold font-mono">TREADS FOR ANY OCCASION</h1>
     <p class="text-sm sm:text-base text-gray-800 font-serif py-4">
@@ -497,20 +664,20 @@
       <u>VIEW MORE</u>
     </h3>
 
-    <div class="flex flex-wrap justify-center gap-6 mt-4">
-      <div class="w-40 sm:w-60">
+    <div class="flex flex-wrap justify-center gap-6 mt-4 ">
+      <div class="w-40 sm:w-60 flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
         <img src="c2.jpeg" alt="Chocolate Cake" class="w-full h-40 sm:h-60 object-cover rounded-md" />
         <p class="mt-2 text-gray-900">CHOCOLATE CAKE</p>
       </div>
-      <div class="w-40 sm:w-60">
+      <div class="w-40 sm:w-60 flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
         <img src="magnolia 3.jpeg" alt="Birthday Cake" class="w-full h-40 sm:h-60 object-cover rounded-md" />
         <p class="mt-2 text-gray-900">WATERJELLY</p>
       </div>
-      <div class="w-40 sm:w-60">
+      <div class="w-40 sm:w-60 flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
         <img src="magnolia5.jpg" alt="Cookies" class="w-full h-40 sm:h-60 object-cover rounded-md" />
         <p class="mt-2 text-gray-900">7SKYMOONCAKE</p>
       </div>
-      <div class="w-40 sm:w-60">
+      <div class="w-40 sm:w-60 flex-none snap-start hover:scale-105 transition-transform duration-300 cursor-pointer">
         <img src="c4.jpeg" alt="Dream Cake" class="w-full h-40 sm:h-60 object-cover rounded-md" />
         <p class="mt-2 text-gray-900">DREAM CAKE</p>
       </div>
@@ -520,11 +687,12 @@
 
 <!-- Container: Delivery Section -->
 <div class=" p-6 sm:p-10 text-center">
-  <div class="text-center">
+  <div class="text-center ">
     <h1 class="text-xl sm:text-2xl font-semibold">DELIVERY AND PICKUP OPTIONS</h1>
-    <p class="py-4 text-base leading-relaxed justify-center text-justify font-serif">
-      A bakery is an establishment that produces and sells flour-based baked goods made in an oven such as bread, cookies, cakes, doughnuts, bagels, pastries, and pies. Some retail bakeries are also categorized as cafés, serving coffee and tea to customers who wish to consume the baked goods on the premises.
+    <p class="py-4 text-base sm:text-sm leading-relaxed font-serif">
+      We make it easy for you to get Magnolia Bakery’s best, wherever you are. Order now for nationwide shipping,<br> place an order to pickup at your local shop, or get in touch with our team to arrange<br> custom catering for your next event.
     </p>
+      
     
   
 </div>
@@ -538,10 +706,9 @@
   <div class="flex flex-col md:flex-row md:flex-wrap gap-6 items-center justify-center">
     
     <div class="w-80 md:w-96 h-72">
-      <img src="example2.jpg" alt="Birthday Cake" class="w-full h-60 object-cover rounded-md" />
-      <p class="mt-2 text-gray-900 text-center text-lg font-bold">ADVANCE ORDER AND LOCALPICKUP</p>
+      <img src="example1.jpg" alt="Birthday Cake" class="w-full h-60 object-cover rounded-md" />
+      <p class="mt-2 text-gray-900 text-center text-lg font-bold">ADVANCE ORDER LOCAL PICKUP</p>
     </div>
-
 
     <div class="w-80 md:w-96 h-72">
       <img src="example2.jpg" alt="Birthday Cake" class="w-full h-60 object-cover rounded-md" />
@@ -579,7 +746,7 @@
 </div>
   <!-- Newsletter Section -->
 <div class="relative w-full h-auto py-16 px-4 md:px-0 overflow-hidden ">
-  <img src="WhatsApp Image 2025-05-04 at 10.38.28_e7e3808b.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 z-0" />
+  <img src="assets/WhatsApp Image 2025-05-04 at 10.38.28_e7e3808b.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 z-0" />
 
   <div class="relative z-10 max-w-3xl mx-auto text-center text-black">
     <h1 class="text-3xl md:text-5xl font-bold mb-4">Join our Newsletter</h1>
@@ -601,69 +768,80 @@
     </div>
   </div>
 </div>
+
+
+
 <!-- Footer Section -->
-<div class="bg-green-400">
-  <div class="py-10 px-4 md:px-10">
+<footer class="bg-blue-100 text-black">
+  <div class="max-w-7xl mx-auto py-10 px-4 md:px-10">
+    
     <!-- Logo -->
     <div class="mb-8 text-center md:text-left">
-      <img src="logo.png" alt="Logo" class="mx-auto md:mx-0 size-[150px] hover:cursor-pointer">
+      <img src="logo.png" alt="Logo" class="mx-auto md:mx-0 w-[150px] hover:cursor-pointer">
     </div>
 
     <!-- Links Section -->
-    <div class="flex flex-col lg:flex-row justify-between space-y-10 lg:space-y-0 lg:space-x-10 text-lg md:text-xl">
+    <div class="flex flex-col lg:flex-row justify-between gap-10 text-base md:text-lg">
+      
       <!-- First Column -->
-      <div class="space-y-5">
-        <a href="#" class="block hover:text-gray-400">CAREERS</a>
-        <a href="#" class="block hover:text-gray-400">PRESS</a>
-        <a href="#" class="block hover:text-gray-400">INTERNATIONAL FRANCHISE</a>
-        <a href="#" class="block hover:text-gray-400">GIFT CARDS</a>
-        <a href="#" class="block hover:text-gray-400">SUBSCRIPTION</a>
-        <a href="#" class="block hover:text-gray-400">GIVING BACK</a>
+      <div class="space-y-3">
+        <a href="#" class="block hover:text-gray-700 transition">CAREERS</a>
+        <a href="#" class="block hover:text-gray-700 transition">PRESS</a>
+        <a href="#" class="block hover:text-gray-700 transition">INTERNATIONAL FRANCHISE</a>
+        <a href="#" class="block hover:text-gray-700 transition">GIFT CARDS</a>
+        <a href="#" class="block hover:text-gray-700 transition">SUBSCRIPTION</a>
+        <a href="#" class="block hover:text-gray-700 transition">GIVING BACK</a>
       </div>
 
       <!-- Second Column -->
-      <div class="space-y-5">
-        <a href="#" class="block hover:text-gray-400">HELP CENTER</a>
-        <a href="#" class="block hover:text-gray-400">REFUNDS & RETURNS</a>
-        <a href="#" class="block hover:text-gray-400">LOYALTY REWARDS PROGRAM</a>
-        <a href="#" class="block hover:text-gray-400">LOYALTY REWARDS PROGRAM TERMS</a>
-        <a href="#" class="block hover:text-gray-400">WHOLESALE</a>
-        <a href="#" class="block hover:text-gray-400">NEWSROOM</a>
-        <a href="#" class="block hover:text-gray-400">ENTER OUR BAKE SALE</a>
+      <div class="space-y-3">
+        <a href="#" class="block hover:text-gray-700 transition">HELP CENTER</a>
+        <a href="#" class="block hover:text-gray-700 transition">REFUNDS & RETURNS</a>
+        <a href="#" class="block hover:text-gray-700 transition">LOYALTY REWARDS PROGRAM</a>
+        <a href="#" class="block hover:text-gray-700 transition">LOYALTY REWARDS PROGRAM TERMS</a>
+        <a href="#" class="block hover:text-gray-700 transition">WHOLESALE</a>
+        <a href="#" class="block hover:text-gray-700 transition">NEWSROOM</a>
+        <a href="#" class="block hover:text-gray-700 transition">ENTER OUR BAKE SALE</a>
       </div>
 
       <!-- Contact Info -->
-      <div class="text-center lg:text-left">
-        <p class="text-3xl font-bold" style="font-family: times new roman;">Have a question?</p>
-        <p class="mt-5" style="font-family: times new roman;">We're always here to lend a helping hand.</p>
-        <p class="mt-5" style="font-family: times new roman;">Consumer Care Team hours are <br>Monday-Friday, 9am - 5pm EST</p>
-        <a href="#" class="block font-semibold text-xl hover:text-gray-400 mt-3">CONTACT US</a>
+      <div class="text-center lg:text-left max-w-md">
+        <p class="text-2xl md:text-3xl font-bold font-serif">Have a question?</p>
+        <p class="mt-3 font-serif">We're always here to lend a helping hand.</p>
+        <p class="mt-3 font-serif">Consumer Care Team hours:<br>Mon-Fri, 9am-5pm EST</p>
+        <a href="#" class="block font-semibold text-lg md:text-xl hover:text-gray-700 mt-4">CONTACT US</a>
+
         <!-- Social Icons -->
-        <div class="flex justify-center lg:justify-start mt-7 space-x-5 text-3xl">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-square-instagram"></i>
-          <i class="fa-brands fa-pinterest"></i>
-          <i class="fa-brands fa-square-twitter"></i>
+        <div class="flex justify-center lg:justify-start mt-6 space-x-5 text-2xl md:text-3xl m-5">
+          <i class="fa-brands fa-facebook hover:text-gray-700"></i>
+          <i class="fa-brands fa-square-instagram hover:text-gray-700"></i>
+          <i class="fa-brands fa-pinterest hover:text-gray-700"></i>
+          <i class="fa-brands fa-square-twitter hover:text-gray-700"></i>
         </div>
       </div>
     </div>
 
     <!-- Bottom Links -->
-    <div class="flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 mt-10 text-xl">
-      <a href="#" class="hover:text-gray-400">DO NOT SELL MY INFORMATION</a>
-      <a href="#" class="hover:text-gray-400">PRIVACY POLICY</a>
-      <a href="#" class="hover:text-gray-400">TERMS OF SERVICE</a>
-      <a href="#" class="hover:text-gray-400">ACCESSIBILITY STATEMENT</a>
-    </div>
-
-    <!-- Payment Icons -->
-    <div class="flex justify-center md:justify-end mt-8 text-3xl space-x-4">
-      <i class="fa-brands fa-cc-visa"></i>
-      <i class="fa-solid fa-earth-americas"></i>
-      <i class="fa-brands fa-cc-mastercard"></i>
+ 
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 text-sm md:text-base">
+      <a href="#" class="hover:text-gray-800 transition">DO NOT SELL MY INFORMATION</a>
+      <a href="#" class="hover:text-gray-800 transition">PRIVACY POLICY</a>
+      <a href="#" class="hover:text-gray-800 transition">TERMS OF SERVICE</a>
+      <a href="#" class="hover:text-gray-800 transition">ACCESSIBILITY STATEMENT</a>
     </div>
   </div>
-</div>
+
+
+
+    <!-- Payment Icons -->
+    <div class="flex justify-center md:justify-end mt-8 text-2xl md:text-3xl space-x-4">
+      <i class="fa-brands fa-cc-visa hover:text-gray-700"></i>
+      <i class="fa-solid fa-earth-americas hover:text-gray-700"></i>
+      <i class="fa-brands fa-cc-mastercard hover:text-gray-700"></i>
+    </div>
+  </div>
+
 
     <div class="fixed lg:right-20 lg:bottom-20 right-10 bottom-10   z-30">
       <div class="chaticon bg-purple-300 w-14 pl-3 rounded-full px-2 py-2 hover:bg-gray-200">
@@ -681,8 +859,25 @@
 
 
 
-<script>
-  const slider = document.getElementById('image-slider');
+
+
+  <!-- JavaScript -->
+  <script>
+    //menubar 
+    function toggleDropdown(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle('hidden');
+    }
+
+    document.getElementById('menuToggle').addEventListener('click', () => {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    });
+
+
+
+    // left and right slider
+    const slider = document.getElementById('image-slider');
   const leftBtn = document.getElementById('slider-button-left');
   const rightBtn = document.getElementById('slider-button-right');
   leftBtn.addEventListener('click', () => {
@@ -694,8 +889,8 @@
   });
 
 
-
-  // Get the close button and the overlay
+// close buttons
+// Get the close button and the overlay
   const closeBtn = document.querySelector(".absolute.top-4.right-4");
   const overlay = document.querySelector(".fixed.inset-0");
 
@@ -704,25 +899,8 @@
     overlay.style.display = "none";
   };
 
-</script>
-<script>
-  const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
 
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-  
-  const closeBtn = document.querySelector(".absolute.top-4.left-4");
-  const overlay = document.querySelector(".fixed.inset-0");
+  </script>
 
-
-  closeBtn.onclick = () => {
-    overlay.style.display = "none";
-
-  };
-</script> 
-
-
- </body>
- </html>
+</body>
+</html>
